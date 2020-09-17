@@ -38,7 +38,7 @@ public class LC93_Restore_IP_Addresses {
         } else if (index == 4)
             return;
 
-        // 取一位
+        // use 1 number
         if (s.length() >= 1 && checkIfVaild(s.substring(0, 1)) && s.length() - 1 <= (4 - index) * 3 && s.length() - 1 >= (4 - index)) {
             sb.append(s.charAt(0));
             sb.append('.');
@@ -46,7 +46,7 @@ public class LC93_Restore_IP_Addresses {
             sb.delete(sb.length() - 2, sb.length());
         }
 
-        // 取二位
+        // use 2 number
         if (s.length() >= 2 && checkIfVaild(s.substring(0, 2)) && s.length() - 2 <= (4 - index) * 3 && s.length() - 1 >= (4 - index)) {
             sb.append(s.substring(0, 2));
             sb.append('.');
@@ -54,7 +54,7 @@ public class LC93_Restore_IP_Addresses {
             sb.delete(sb.length() - 3, sb.length());
         }
 
-        // 取三位
+        // use 3 number
         if (s.length() >= 3 && checkIfVaild(s.substring(0, 3)) && s.length() - 3 <= (4 - index) * 3 && s.length() - 1 >= (4 - index)) {
             sb.append(s.substring(0, 3));
             sb.append('.');
