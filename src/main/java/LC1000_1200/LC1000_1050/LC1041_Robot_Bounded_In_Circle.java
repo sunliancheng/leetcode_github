@@ -3,6 +3,9 @@ package LC1000_1200.LC1000_1050;
 import LeetCodeUtils.Vector;
 import org.junit.Test;
 
+/**
+ *  2020-09-18 11:18 AM at Hangzhou
+ */
 public class LC1041_Robot_Bounded_In_Circle {
 
     private double[] direction = new double[]{0, 1};
@@ -38,9 +41,5 @@ public class LC1041_Robot_Bounded_In_Circle {
     public void test() {
         System.out.println(isRobotBounded("RLLGLRRRRGGRRRGLLRRR"));
     }
-
-
-
-
 
 }
