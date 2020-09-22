@@ -33,11 +33,13 @@ public class LC1094_Car_Pooling {
 
 
     public boolean carPooling(int[][] trips, int capacity) {
+
         int current_passengers = 0;
         HashMap<Integer, Integer> map = new HashMap<>();
         Collections.sort(Arrays.asList(trips), new MyComparator());
 
         int index = 0, i = 0, max = trips[0][2];
+
         while (index < trips.length && i <= max) {
             int flag = 0;
             max = max > trips[index][2] ? max : trips[index][2];
