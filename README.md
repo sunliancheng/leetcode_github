@@ -8,3 +8,7 @@ And my future Accepted problems will be added in this repo after I finishing the
 ToDo list：
 
 lc xxx
+combination sum 2
+two sum 4
+next permutation
+lc 134
