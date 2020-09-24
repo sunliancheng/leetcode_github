@@ -3,7 +3,7 @@ package LC0_200.LC0_50;
 import org.junit.Test;
 
 /**
- *  I dont know how my program is so slow and not encounters the Time Limit Exception
+ *  I dont know why my program is so slow and not encounters the Time Limit Exception
  *  It is too late, and I just go to bed
  *  2020-09-19 01:34 AM at Hangzhou
  */
