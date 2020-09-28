@@ -53,4 +53,12 @@ public class MyPrint {
     }
 
 
+    public static void print2DMatrix(char[][] matrix) {
+        System.out.println("*********printing the 2D char matrix********");
+        for (int i = 0; i < matrix.length; ++i) {
+            for (int j = 0; j < matrix[0].length; ++j)
+                System.out.print(matrix[i][j] + " ");
+            System.out.println();
+        }
+    }
 }
