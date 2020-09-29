@@ -12,3 +12,4 @@ combination sum 2
 two sum 4
 next permutation
 lc 134
+lc 99
