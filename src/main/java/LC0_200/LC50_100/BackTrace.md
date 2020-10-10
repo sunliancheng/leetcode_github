@@ -18,7 +18,7 @@ private void backtrack(List<List<Integer>> list , List<Integer> tempList, int []
 }
 ```
 Subsets II (contains duplicates) : https://leetcode.com/problems/subsets-ii/
-
+```java
 public List<List<Integer>> subsetsWithDup(int[] nums) {
     List<List<Integer>> list = new ArrayList<>();
     Arrays.sort(nums);
@@ -35,8 +35,10 @@ private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] 
         tempList.remove(tempList.size() - 1);
     }
 } 
-Permutations : https://leetcode.com/problems/permutations/
+```
 
+Permutations : https://leetcode.com/problems/permutations/
+```java
 public List<List<Integer>> permute(int[] nums) {
    List<List<Integer>> list = new ArrayList<>();
    // Arrays.sort(nums); // not necessary
@@ -56,7 +58,9 @@ private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] 
       }
    }
 } 
+```
 Permutations II (contains duplicates) : https://leetcode.com/problems/permutations-ii/
+```java
 
 public List<List<Integer>> permuteUnique(int[] nums) {
     List<List<Integer>> list = new ArrayList<>();
@@ -79,7 +83,11 @@ private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] 
         }
     }
 }
+```
+
 Combination Sum : https://leetcode.com/problems/combination-sum/
+```java
+
 
 public List<List<Integer>> combinationSum(int[] nums, int target) {
     List<List<Integer>> list = new ArrayList<>();
@@ -98,8 +106,11 @@ private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] 
             tempList.remove(tempList.size() - 1);
         }
     }
-}
+} 
+```
 Combination Sum II (can't reuse same element) : https://leetcode.com/problems/combination-sum-ii/
+```java
+
 
 public List<List<Integer>> combinationSum2(int[] nums, int target) {
     List<List<Integer>> list = new ArrayList<>();
@@ -120,8 +131,11 @@ private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] 
             tempList.remove(tempList.size() - 1); 
         }
     }
-} 
+}   
+```
 Palindrome Partitioning : https://leetcode.com/problems/palindrome-partitioning/
+```java
+
 
 public List<List<String>> partition(String s) {
    List<List<String>> list = new ArrayList<>();
@@ -148,3 +162,4 @@ public boolean isPalindrome(String s, int low, int high){
       if(s.charAt(low++) != s.charAt(high--)) return false;
    return true;
 } 
+```
