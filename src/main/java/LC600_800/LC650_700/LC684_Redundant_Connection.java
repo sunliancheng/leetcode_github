@@ -1,14 +1,48 @@
 package LC600_800.LC650_700;
 
+import org.junit.Test;
+
 public class LC684_Redundant_Connection {
 
-    public int[] findRedundantConnection(int[][] edges) {
-
-
-
-
-        return null;
+    @Test
+    public void test() {
+        System.out.println(findRedundantConnection(new int[][]{{1, 2}, {3, 4}, {2, 3}, {1, 4}, {1, 5}}));
     }
+
+    private int[] pre = new int[10000];
+
+    public int[] findRedundantConnection(int[][] edges) {
+        if (edges.length < 2)
+            return new int[0];
+
+        for (int i = 0; i <= edges.length; ++i)
+            pre[i] = i;
+
+        int[] result = new int[edges.length];
+        for (int i = 0; i < edges.length; ++i) {
+            if (find(edges[i][0]) != find(edges[i][1]))
+                merge(edges[i][0], edges[i][1]);
+            else {
+                result = edges[i];
+                break;
+            }
+        }
+        return result;
+    }
+
+    public int find(int x) {
+        int t = x;
+        while (pre[t] != t)
+            t = pre[t];
+        return t;
+    }
+
+    public void merge(int a, int b) {
+        int fa = find(a), fb = find(b);
+        if (fa != fb)
+            pre[fa] = fb;
+    }
+
 
 
 

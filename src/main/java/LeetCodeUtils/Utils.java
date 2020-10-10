@@ -15,6 +15,7 @@ public class Utils {
     private static int count = 0;
 
     private static Set<Integer> set = new HashSet();
+    private static List<String> list = new ArrayList<>();
 
     /**
      *  find out all the files in the folder ---- "./src/main/java"
@@ -35,6 +36,14 @@ public class Utils {
             if (file.getName().startsWith("LC")) {
                 count++;
                 set.add(Integer.valueOf(file.getName().split("_")[0].substring(2)));
+                StringBuilder sb = new StringBuilder();
+                String[] ss = file.getName().split("_");
+                for (int i = 1; i < ss.length; ++i) {
+                    sb.append(ss[i]);
+                    if (i != ss.length - 1)
+                        sb.append(" ");
+                }
+                list.add(sb.toString().substring(0, sb.length() - 5));
             }
         }
         else {
@@ -69,8 +78,8 @@ public class Utils {
         }
         File outputFile =new File("./src/main/java/outputProblemsList");
         Writer out =new FileWriter(outputFile);
-        for (Problem problem : problemList) {
-            out.write(problem.toString());
+        for (String problem : list) {
+            out.write(problem);
             out.write("\n");
         }
         out.close();
