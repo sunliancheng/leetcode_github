@@ -2,20 +2,18 @@ package LeetCodeUtils;
 
 import LeetCodeUtils.LeetCode.Problem;
 import org.junit.Test;
+import sun.jvm.hotspot.jdi.IntegerValueImpl;
 
 import java.io.*;
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Utils {
 
     private static int count = 0;
 
     private static Set<Integer> set = new HashSet();
-    private static List<String> list = new ArrayList<>();
+    private static List<Problem> proList = new ArrayList<>();
 
     /**
      *  find out all the files in the folder ---- "./src/main/java"
@@ -43,7 +41,10 @@ public class Utils {
                     if (i != ss.length - 1)
                         sb.append(" ");
                 }
-                list.add(sb.toString().substring(0, sb.length() - 5));
+                Problem problem = new Problem();
+                problem.setId(Integer.valueOf(ss[0].substring(2)));
+                problem.setName(sb.toString().substring(0, sb.length() - 5));
+                proList.add(problem);
             }
         }
         else {
@@ -78,12 +79,22 @@ public class Utils {
         }
         File outputFile =new File("./src/main/java/outputProblemsList");
         Writer out =new FileWriter(outputFile);
-        for (String problem : list) {
-            out.write(problem);
+        int i = 0;
+
+        Collections.sort(proList, new MyComparator());
+        for (Problem problem : proList) {
+            out.write(problem.getId() + " " + problem.getName());
             out.write("\n");
         }
         out.close();
         System.out.println("all number of solved problems here is : " + count);
     }
 
+    public class MyComparator implements Comparator<Problem> {
+
+        @Override
+        public int compare(Problem o1, Problem o2) {
+            return o1.getId() > o2.getId() ? 1 : o1.getId() == o2.getId() ? 0 : -1;
+        }
+    }
 }
