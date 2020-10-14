@@ -7,10 +7,10 @@ import org.junit.Test;
 public class LC37_Sudoku_Solver {
 
     boolean[][] col = new boolean[9][9], row = new boolean[9][9], nine = new boolean[9][9];
-    char[][] res; boolean flag = false; int i = 0, j = 0; boolean fl = false;
+    boolean fl = false;
 
-    public void init(char[][] board) {
-        flag = true;
+    public void solveSudoku(char[][] board) {
+
         for (int i = 0; i < board.length; ++i) {
             for (int j = 0; j < 9; ++j) {
                 if (board[i][j] == '.')
@@ -22,15 +22,7 @@ public class LC37_Sudoku_Solver {
                 }
             }
         }
-    }
-
-    public void solveSudoku(char[][] board) {
-
-        if (!flag)
-            init(board);
-
         dfs(board, 0, 0);
-        //MyPrint.print2DMatrix(board);
     }
 
     public boolean check(int i, int j, int val) {
@@ -65,7 +57,6 @@ public class LC37_Sudoku_Solver {
             return;
         }
 
-
         if (board[i][j] == '.') {
             for (int val = 0; val < 9; ++val) {
                 if (check(i, j, val)) {
@@ -93,7 +84,6 @@ public class LC37_Sudoku_Solver {
             else
                 dfs(board, i + 1, 0);
         }
-        return;
     }
 
     @Test
