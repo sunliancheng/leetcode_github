@@ -4,6 +4,9 @@ import LeetCodeUtils.MyMatrix;
 import LeetCodeUtils.MyPrint;
 import org.junit.Test;
 
+/**
+ * 2020-10-14 at Hangzhou
+ */
 public class LC37_Sudoku_Solver {
 
     boolean[][] col = new boolean[9][9], row = new boolean[9][9], nine = new boolean[9][9];

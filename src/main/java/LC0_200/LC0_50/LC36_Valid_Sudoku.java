@@ -3,6 +3,9 @@ package LC0_200.LC0_50;
 import LeetCodeUtils.MyMatrix;
 import org.junit.Test;
 
+/**
+ * 2020-10-14 at Hangzhou
+ */
 public class LC36_Valid_Sudoku {
 
     boolean[][] col = new boolean[9][9], row = new boolean[9][9], nine = new boolean[9][9];

@@ -12,3 +12,4 @@ two sum 4
 next permutation
 lc 134
 lc 99
+lc 29

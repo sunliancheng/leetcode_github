@@ -77,13 +77,16 @@ public class Utils {
         }catch(Exception e){
             e.printStackTrace();
         }
-        File outputFile =new File("./src/main/java/outputProblemsList");
+        File outputFile =new File("./src/main/java/outputProblemsList.md");
         Writer out =new FileWriter(outputFile);
         int i = 0;
 
         Collections.sort(proList, new MyComparator());
+        out.write("| 序号 | 题目  |\n" +
+                "| :-----| :---- |\n");
+
         for (Problem problem : proList) {
-            out.write(problem.getId() + " " + problem.getName());
+            out.write("|" + problem.getId() + "|" + problem.getName() + "|");
             out.write("\n");
         }
         out.close();
