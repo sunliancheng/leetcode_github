@@ -14,7 +14,6 @@ public class Utils {
 
     private static Set<Integer> set = new HashSet();
     private static List<Problem> proList = new ArrayList<>();
-
     /**
      *  find out all the files in the folder ---- "./src/main/java"
      */
@@ -99,5 +98,23 @@ public class Utils {
         public int compare(Problem o1, Problem o2) {
             return o1.getId() > o2.getId() ? 1 : o1.getId() == o2.getId() ? 0 : -1;
         }
+    }
+
+
+    /**
+     * make a plan for this year's leetcode submission
+     * calculate the daily task
+     */
+    @Test
+    public void testtt() {
+        int current = 200, target = 450;
+        int dis = target - current;
+
+        String starTime = "2020-10-19";
+        String endTime =  "2020-12-31";
+        int i = - MyDate.caculateTotalTime(starTime, endTime);
+        //System.out.println(dis / Double.valueOf(i));
+        double per = (3 * 5 + 2 * 5) / 7.0;
+        System.out.println(i + " " + dis / per);
     }
 }

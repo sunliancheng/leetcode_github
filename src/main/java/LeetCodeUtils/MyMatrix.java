@@ -35,6 +35,25 @@ public class MyMatrix {
         return result;
     }
 
+    public static int[][] IntMatrixAdapter(String s, int m, int n) {
+        int[][] result = new int[m][n];
+        String[] ss = s.split("]");
+        int i = 0;
+        for (String in : ss) {
+            if (in.length() != 0 && in != null && !in.equals("\n")) {
+                String finl = in.substring(2);
+                int j = 0;
+                String[] h = finl.split(",");
+                for (String hs : h) {
+                    String res = hs.replace('"', ' ').trim();
+                    result[i][j++] = Integer.valueOf(res);
+                }
+                i++;
+            }
+        }
+        return result;
+    }
+
     public static char[][] copyMatrix(char[][] m) {
         char[][] res = new char[m.length][m[0].length];
         for (int i = 0; i < m.length; ++i) {

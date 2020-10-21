@@ -7,7 +7,20 @@ public class LC31_Next_Permutaion {
 
     @Test
     public void test() {
-        nextPermutation(new int[]{1, 2, 3});
+        getPermutation(3, 3);
+    }
+
+    public String getPermutation(int n, int k) {
+        int[] nums = new int[n];
+        for (int i = 0; i < n; ++i) {
+            nums[i] = 1 + i;
+        }
+        for (int i = 0; i < k; ++i)
+            nextPermutation(nums);
+        for (int i : nums) {
+            System.out.print(i);
+        }
+        return nums.toString();
     }
 
     public void nextPermutation(int[] nums) {
