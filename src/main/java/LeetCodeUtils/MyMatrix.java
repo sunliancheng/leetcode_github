@@ -54,6 +54,16 @@ public class MyMatrix {
         return result;
     }
 
+    public static int[] OneDIntMatrixAdapter(String s) {
+        String[] ss = s.split("]");
+        String[] strs = ss[0].split(",");
+        strs[0] = strs[0].substring(1, 2);
+        int[] res = new int[strs.length];
+        for (int i = 0; i < strs.length; ++i)
+            res[i] = (int) strs[i].charAt(0) - '0';
+        return res;
+    }
+
     public static char[][] copyMatrix(char[][] m) {
         char[][] res = new char[m.length][m[0].length];
         for (int i = 0; i < m.length; ++i) {
