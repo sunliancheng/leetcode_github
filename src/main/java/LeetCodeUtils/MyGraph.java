@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.Map.Entry;
 
 /**
- * this class is not formal Graph defined in the text book,
+ * this class is a not formal Graph defined in the text book,
  * as I use hashmap rather than linkedlist
  * note that: all nodes are unique
  */
