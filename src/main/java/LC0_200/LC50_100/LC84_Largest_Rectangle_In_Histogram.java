@@ -11,15 +11,12 @@ public class LC84_Largest_Rectangle_In_Histogram {
     }
 
     public int largestRectangleArea(int[] heights) {
-        if (heights.length == 0)
-            return 0;
         int max = 0;
         for (int i = 0; i < heights.length; ++i) {
-            max = max == 0 ? heights[i] : max;
-            int k = 1, h = heights[i];
+            int k = 0, h = heights[i];
             while (k <= i) {
-                h = Math.min(h, heights[i - k]);
-                max = Math.max(max, h * (k + 1));
+                h = h < heights[i - k] ? h : heights[i - k];
+                max = max > h * (k + 1) ? max : h * (k + 1);
                 k++;
             }
         }
