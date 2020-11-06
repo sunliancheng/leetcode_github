@@ -1,6 +1,13 @@
 package LC0_200.LC0_50;
 
+import org.junit.Test;
+
 public class LC10_Regular_Expression_Matching {
+
+    @Test
+    public void test() {
+        System.out.println();
+    }
 
     public boolean isMatch(String text, String pattern) {
         if (pattern.isEmpty())
