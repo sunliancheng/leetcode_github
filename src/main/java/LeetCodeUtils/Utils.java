@@ -32,7 +32,7 @@ public class Utils {
         if (file.isFile()) {
             if (file.getName().startsWith("LC")) {
                 count++;
-                System.out.println(file.getName());
+                //System.out.println(file.getName());
                 set.add(Integer.valueOf(file.getName().split("_")[0].substring(2)));
                 StringBuilder sb = new StringBuilder();
                 String[] ss = file.getName().split("_");

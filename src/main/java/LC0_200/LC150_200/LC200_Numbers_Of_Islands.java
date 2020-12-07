@@ -1,4 +1,4 @@
-package LC200_400.LC200_250;
+package LC0_200.LC150_200;
 
 public class LC200_Numbers_Of_Islands {
     public int numIslands(char[][] grid) {
