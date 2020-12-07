@@ -10,17 +10,51 @@ public class LC81_Search_In_Rotated_Sorted_Array2 {
         System.out.println(search(MyMatrix.OneDIntMatrixAdapter("[2,5,6,0,0,1,2]"), 3));
     }
 
-    public boolean search(int[] nums, int target) {
-        for (int i : nums)
-            if (i == target)
+    public boolean search2(int[] nums, int target) {
+        int s = 0, e = nums.length - 1;
+        while (s <= e) {
+            int mid = (s + e) / 2;
+            if (nums[mid] == target)
                 return true;
+            if (nums[s] == nums[mid])
+                ++s;
+            else if (nums[mid] <= nums[e]) {
+                if (target > nums[mid] && target <= nums[e])
+                    s = mid + 1;
+                else
+                    e = mid - 1;
+            } else {
+                if (target >= nums[s] && target < nums[mid])
+                    e = mid - 1;
+                else
+                    s = mid + 1;
+            }
+        }
         return false;
     }
 
-    public void serachInSub(int[] nums, int target, int start, int end) {
-        int first = nums[start], last = nums[end], mid = nums[(start + end) / 2];
-        if (mid < first) {
+    public boolean search(int[] nums, int target) {
 
+        int s = 0, e = nums.length - 1;
+        while (s <= e) {
+            int mid = (s + e) / 2;
+            if (nums[mid] == target)
+                return true;
+            if (nums[s] > nums[mid])
+                if (nums[mid] < target && target <= nums[e])
+                    s = mid + 1;
+                else
+                    e = mid - 1;
+            else if (nums[s] == nums[mid])
+                ++s;
+            else
+                if (nums[mid] > target && target >= nums[s])
+                     e = mid - 1;
+                else
+                    s = mid + 1;
         }
+        return false;
     }
+
+
 }

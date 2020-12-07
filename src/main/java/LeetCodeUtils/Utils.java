@@ -10,16 +10,16 @@ import java.util.*;
 
 public class Utils {
 
-    private static int count = 0;
+    private static long count = 0;
 
     private static Set<Integer> set = new HashSet();
     private static List<Problem> proList = new ArrayList<>();
     /**
      *  find out all the files in the folder ---- "./src/main/java"
      */
-    public void findAllFiles() {
+    public void findAllFiles(String fileP) {
         //读取目录
-        String filePath = "./src/main/java";
+        String filePath = fileP == null ? "./src/main/java" : fileP;
         File file=new File(filePath);
         File[] tempList = file.listFiles();
 
@@ -32,6 +32,7 @@ public class Utils {
         if (file.isFile()) {
             if (file.getName().startsWith("LC")) {
                 count++;
+                System.out.println(file.getName());
                 set.add(Integer.valueOf(file.getName().split("_")[0].substring(2)));
                 StringBuilder sb = new StringBuilder();
                 String[] ss = file.getName().split("_");
@@ -53,29 +54,52 @@ public class Utils {
         }
     }
 
+    public void findFiles2(File file) {
+        if (file.isFile()) {
+            if (true) {
+                try{
+                    BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
+                    String s = null;
+                    while((s = br.readLine())!=null){
+                        count++;
+                    }
+                    br.close();
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+
+            }
+        }
+        else {
+            File[] tempList = file.listFiles();
+            for (File tem : tempList)
+                findFiles2(tem);
+        }
+    }
+
     /**
      *  modify the list file and then output to a new file
      */
     @Test
     public void modifyListFile() throws IOException {
-        String filePath = "./src/main/java/list";
+        String filePath = "./src/main/java";
         File file = new File(filePath);
-        findAllFiles();
+        findAllFiles(null);
         List<Problem> problemList = new ArrayList();
 
-        try{
-            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
-            String s = null;
-            while((s = br.readLine())!=null){
-                Problem problem = Problem.generate(s);
-                if (set.contains(problem.getId()))
-                    problem.setAnswered(true);
-                problemList.add(problem);
-            }
-            br.close();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
+//        try{
+//            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
+//            String s = null;
+//            while((s = br.readLine())!=null){
+//                Problem problem = Problem.generate(s);
+//                if (set.contains(problem.getId()))
+//                    problem.setAnswered(true);
+//                problemList.add(problem);
+//            }
+//            br.close();
+//        }catch(Exception e){
+//            e.printStackTrace();
+//        }
         File outputFile =new File("./src/main/java/outputProblemsList.md");
         Writer out =new FileWriter(outputFile);
         int i = 0;
@@ -90,6 +114,16 @@ public class Utils {
         }
         out.close();
         System.out.println("all number of solved problems here is : " + count);
+    }
+
+    @Test
+    public void ttt() throws IOException {
+        String filePath = "/Users/wangsimin/Desktop/leetcode_github/src";
+        File file = new File(filePath);
+        //读取目录
+        findFiles2(file);
+
+        System.out.println(count);
     }
 
     public class MyComparator implements Comparator<Problem> {

@@ -8,42 +8,43 @@ import org.junit.Test;
 public class LC34_Find_First_And_Last_Position_Of_Element_In_Sorted_Array {
 
     public int[] searchRange(int[] nums, int target) {
-        if (nums.length == 1) {
-            if (nums[0] == target)
-                return new int[]{0, 0};
-            else
-                return new int[]{-1, -1};
-        }
-        int pos = binary_search(nums, target, 0, nums.length - 1);
+        int pos = binary_search(nums, target);
         if (pos == -1)
             return new int[]{-1, -1};
-        int low = pos, high = pos;
-        while (low >= 0 && nums[low] == nums[pos])
-            low--;
-        while (high < nums.length && nums[high] == nums[pos])
-            high++;
-        return new int[]{++low, --high};
+        int l = pos, h = pos;
+        while (l >= 0)
+            if (nums[l] == target)
+                --l;
+            else
+                break;
+        while (h < nums.length)
+            if (nums[h] == target)
+                ++h;
+            else
+                break;
+        return new int[]{++l, --h};
     }
 
-    public int binary_search(int[] nums, int target, int low, int high) {
-        int pos = 0;
-        while (low <= high) {
-            pos = (low + high) / 2;
-            if (nums[pos] == target)
-                return pos;
-            else if (nums[pos] > target) {
-                high = pos - 1;
-            } else
-                low = pos + 1;
+    public int binary_search(int[] nums, int target) {
+        int l = 0, r = nums.length - 1;
+        while (l <= r) {
+            int mid = (l + r) / 2;
+            if (nums[mid] == target)
+                return mid;
+            else if (nums[mid] > target)
+                r = mid - 1;
+            else
+                l = mid + 1;
         }
         return -1;
     }
 
     @Test
     public void test() {
-        System.out.println(binary_search(new int[]{1, 3}, 3, 0, 1));
+        //System.out.println(binary_search(new int[]{1, 3}, 3));
         int[] arr = new int[]{5, 7, 7, 8, 8, 10};
-        System.out.println(searchRange(arr, 6)[0] + " " + searchRange(arr, 6)[1]);
+        System.out.println(binary_search(arr, 8));
+        System.out.println(searchRange(arr, 8)[0] + " " + searchRange(arr, 8)[1]);
     }
 
 
