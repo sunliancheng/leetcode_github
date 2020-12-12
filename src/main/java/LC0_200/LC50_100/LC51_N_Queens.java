@@ -11,78 +11,56 @@ import java.util.*;
  */
 public class LC51_N_Queens {
 
-    Set<String> set = new HashSet<>();
-    List<List<String>> res = new ArrayList<>();
-    List<String> te = new ArrayList<>();
-    char[][] dp;
 
+    private List<List<String>> res = new ArrayList<>();
+    boolean[] r, c, d1, d2;
     public List<List<String>> solveNQueens(int n) {
-        //dp = new char[n][n];
+        c = new boolean[n];
+        d1 = new boolean[2 * n]; // d1 = r - c + n
+        d2 = new boolean[2 * n]; // d2 = r + c
+
+        char[][] board = new char[n][n];
         for (int i = 0; i < n; ++i) {
-            StringBuilder sb = new StringBuilder();
+            board[i] = new char[n];
             for (int j = 0; j < n; ++j)
-                sb.append('.');
-            te.add(sb.toString());
+                board[i][j] = '.';
         }
-        recursive(0, n);
+        backtracking(board, 0, n);
+
+//        for (List<String> s : res) {
+//
+//            for (String ss : s)
+//                System.out.print(ss.toString() + " ");
+//            System.out.println();
+//        }
         return res;
     }
 
+    void backtracking(char[][] board, int row, int n) {
+        if (row == n) {
+            List<String> tem = new ArrayList<>();
+            for (int i = 0; i < n; ++i) {
+                StringBuilder sb = new StringBuilder();
+                for (int j = 0; j < n; ++j)
+                    sb.append(board[i][j]);
+                tem.add(sb.toString());
+            }
 
-    public void recursive(int i, int n) {
-        if (i == n) {
-            List<String> t = new ArrayList<>(te);
-            res.add(t);
+            res.add(tem);
             return;
         }
 
-        for (int j = 0; j < n; ++j) {
-            StringBuilder row = new StringBuilder();
-            StringBuilder col = new StringBuilder();
-            StringBuilder dig = new StringBuilder();
-            StringBuilder dig2 = new StringBuilder();
-            row.append(i); row.append('-');
-            col.append(j); col.append('|');
-            int tem = i + j;
-            dig.append(tem); dig.append('[');
-            int temp = i - j;
-            dig2.append(temp); dig2.append(']');
-            if (!set.contains(row.toString()) && !set.contains(col.toString())
-                    && !set.contains(dig.toString()) && !set.contains(dig2.toString())) {
-                set.add(row.toString()); set.add(col.toString());
-                set.add(dig.toString()); set.add(dig2.toString());
+        for (int i = 0; i < n; ++i) {
+            if (c[i] || d1[row - i + n] || d2[row + i])
+                continue;
+            board[row][i] = 'Q';
+            c[i] = d1[row - i + n] = d2[row + i] = true;
 
-                //dp[i][j] = 'Q';
-                String s = te.get(i);
-                StringBuilder sb = new StringBuilder();
-                for (int l = 0; l < s.length(); ++l) {
-                    if (l == j) {
-                        sb.append('Q');
-                        continue;
-                    }
-                    sb.append(s.charAt(l));
-                }
-                te.set(i, sb.toString());
+            backtracking(board, row + 1, n);
 
-                // recursive
-                int ii = i + 1;
-                //System.out.println(te);
-                recursive(ii, n);
+            board[row][i] = '.';
+            c[i] = d1[row - i + n] = d2[row + i] = false;
 
-                set.remove(row.toString()); set.remove(col.toString());
-                set.remove(dig2.toString()); set.remove(dig.toString());
-                //dp[i][j] = '.';
-                s = te.get(i);
-                sb = new StringBuilder();
-                for (int l = 0; l < s.length(); ++l) {
-                    if (l == j) {
-                        sb.append('.');
-                        continue;
-                    }
-                    sb.append(s.charAt(l));
-                }
-                te.set(i, sb.toString());
-            }
         }
 
     }
@@ -90,7 +68,7 @@ public class LC51_N_Queens {
 
     @Test
     public void test() {
-        System.out.println(solveNQueens(1));
+        System.out.println(solveNQueens(4));
     }
 
 

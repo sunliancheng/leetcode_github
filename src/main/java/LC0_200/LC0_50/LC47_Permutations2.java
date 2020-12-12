@@ -1,46 +1,52 @@
 package LC0_200.LC0_50;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
+import org.junit.Test;
+
+import java.util.*;
 
 public class LC47_Permutations2 {
+
+    @Test
+    public void test() {
+        permuteUnique(new int[]{-1,2,-1,2,1,-1,2,1});
+    }
+
+    private List<List<Integer>> res = new ArrayList<>();
     public List<List<Integer>> permuteUnique(int[] nums) {
 
-        List<LinkedList<Integer>> result = new ArrayList<LinkedList<Integer>>();
-        for(int num : nums){
-            result = insert(num, result);
+        dfs(nums, 0);
+
+        for (List<Integer> ls : res) {
+
+            for (Integer i : ls)
+                System.out.print(i);
+            System.out.println();
         }
-        List<List<Integer>> re = new ArrayList<List<Integer>>();
-        re.addAll(result);
-        HashSet set = new HashSet(re);
-        re.clear();
-        re.addAll(set);
-        return re;
+
+        return res;
     }
 
-    private List<LinkedList<Integer>> insert(int num, List<LinkedList<Integer>> result) {
-        List<LinkedList<Integer>> re = new ArrayList<LinkedList<Integer>>();
-        if(result.size() == 0){
-            LinkedList<Integer> ls = new LinkedList<>();
-            ls.add(num);
-            re.add(ls);
-            return re;
+    void dfs(int[] nums, int level) {
+        if (level == nums.length - 1) {
+            List<Integer> ls = new ArrayList<>();
+            for (int i : nums)
+                ls.add(i);
+            res.add(ls);
+            return;
         }
-        for(LinkedList<Integer> ls : result) {
-            for(int i = 0; i <= ls.size(); ++i){
-                LinkedList<Integer> temp1 = copyList(ls);
-                temp1.add(i , num);
-                re.add(temp1);
-            }
+        boolean[] used = new boolean[20];
+        for (int i = level; i < nums.length; ++i) {
+            if (used[nums[i] + 10])
+                continue;
+            else
+                used[nums[i] + 10] = true;
+
+            int tem = nums[level];
+            nums[level] = nums[i]; nums[i] = tem;
+            dfs(nums, level + 1);
+            nums[i] = nums[level]; nums[level] = tem;
         }
-        return re;
+
     }
 
-    private LinkedList<Integer> copyList(LinkedList<Integer> ls) {
-        LinkedList<Integer> ans = new LinkedList<>();
-        ans.addAll(ls);
-        return ans;
-    }
 }

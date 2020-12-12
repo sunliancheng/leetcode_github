@@ -4,71 +4,73 @@ import LeetCodeUtils.MyMatrix;
 import LeetCodeUtils.MyPrint;
 import org.junit.Test;
 
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class LC130_Surrounded_Regions {
 
     @Test
     public void test() {
-        solve(MyMatrix.matrixAdapter("[[X,X,X,X],[X,0,0,X],[X,X,0,X],[X,0,X,X]", 4, 4));
+        String a = "[[\"X\",\"O\",\"O\",\"X\",\"X\",\"X\",\"O\",\"X\",\"O\",\"O\"],[\"X\",\"O\",\"X\",\"X\",\"X\",\"X\",\"X\",\"X\",\"X\",\"X\"],[\"X\",\"X\",\"X\",\"X\",\"O\",\"X\",\"X\",\"X\",\"X\",\"X\"],[\"X\",\"O\",\"X\",\"X\",\"X\",\"O\",\"X\",\"X\",\"X\",\"O\"],[\"O\",\"X\",\"X\",\"X\",\"O\",\"X\",\"O\",\"X\",\"O\",\"X\"],[\"X\",\"X\",\"O\",\"X\",\"X\",\"O\",\"O\",\"X\",\"X\",\"X\"],[\"O\",\"X\",\"X\",\"O\",\"O\",\"X\",\"O\",\"X\",\"X\",\"O\"],[\"O\",\"X\",\"X\",\"X\",\"X\",\"X\",\"O\",\"X\",\"X\",\"X\"],[\"X\",\"O\",\"O\",\"X\",\"X\",\"O\",\"X\",\"X\",\"O\",\"O\"],[\"X\",\"X\",\"X\",\"O\",\"O\",\"X\",\"O\",\"X\",\"X\",\"O\"]]";
+        solve(MyMatrix.matrixAdapter(a, 10, 10));
     }
 
     //0 original status  1 reachable  2 not reachable
-    int[][] m;
-    Stack<int[]> stack = new Stack<>();
-    boolean flag = false;
-
+    Deque<int[]> queue = new LinkedList<>();
+    int[] direction = new int[]{-1, 0, 1, 0, -1};
     public void solve(char[][] board) {
-
-        if (board.length == 0) {
+        if (board.length == 0 || board[0].length == 0)
             return;
-        }
-
-        m = new int[board.length][board[0].length];
-
         for (int i = 0; i < board.length; ++i) {
-            for (int j = 0; j < board[0].length; ++j) {
-                flag = false;
-                dfs(i, j, board);
-                int tem = 2;
-                if (!flag) {
-                    for (int[] n : stack) {
-                        board[n[0]][n[1]] = 'X';
-                    }
-                }
-                stack.clear();
+            if (board[i][0] == 'O') {
+                queue.add(new int[]{i, 0});
+                board[i][0] = 'K';
+            }
+            if (board[i][board[0].length - 1] == 'O') {
+                queue.add(new int[]{i, board[0].length - 1});
+                board[i][board[0].length - 1] = 'K';
+            }
+
+        }
+        for (int i = 1; i < board[0].length - 1; ++i) {
+            if (board[0][i] == 'O') {
+                queue.add(new int[]{0, i});
+                board[0][i] = 'K';
+            }
+            if (board[board.length - 1][i] == 'O') {
+                queue.add(new int[]{board.length - 1, i});
+                board[board.length - 1][i] = 'K';
             }
         }
+        bfs(board);
+        for (int i = 0; i < board.length; ++i)
+            for (int j = 0; j < board[0].length; ++j)
+                if (board[i][j] == 'K')
+                    board[i][j] = 'O';
+                else
+                    board[i][j] = 'X';
 
     }
 
-    private void dfs(int i, int j, char[][] board) {
+    void bfs(char[][] board) {
+        while (!queue.isEmpty()) {
+            int[] point = queue.poll();
+            int x = point[0], y = point[1];
 
-        if (i < 0 || i >= board.length || j < 0 || j >= board[0].length)
-            return;
-        if (board[i][j] == 'X')
-            return;
+            for (int i = 0; i < 4; ++i) {
+                int xx = x + direction[i], yy = y + direction[i + 1];
+                if (xx >= 0 && xx < board.length && yy >= 0 && yy < board[0].length
+                        && board[xx][yy] == 'O') {
+                    queue.offer(new int[]{xx, yy});
+                    board[xx][yy] = 'K';
+                }
+            }
 
-        if (m[i][j] == 1) {
-            return;
         }
-        if (m[i][j] == 2) {
-
-        }
-
-        m[i][j] = 1;
-        stack.push(new int[]{i, j});
-
-        if (i == 0 || i == board.length - 1 || j == 0 || j == board[0].length - 1) {
-            flag = true;
-        }
-
-
-        dfs(i + 1, j, board);
-        dfs(i, j + 1, board);
-        dfs(i - 1, j, board);
-        dfs(i, j - 1, board);
     }
+
 
 
 }
