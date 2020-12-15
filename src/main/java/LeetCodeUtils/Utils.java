@@ -118,7 +118,7 @@ public class Utils {
 
     @Test
     public void ttt() throws IOException {
-        String filePath = "/Users/wangsimin/Desktop/leetcode_github/src";
+        String filePath = "/Users/wangsimin/Desktop/leetcode_github/src/main/java";
         File file = new File(filePath);
         //读取目录
         findFiles2(file);

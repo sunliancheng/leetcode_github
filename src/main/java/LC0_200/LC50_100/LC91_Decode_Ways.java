@@ -6,10 +6,10 @@ public class LC91_Decode_Ways {
 
     @Test
     public void test() {
-        System.out.println(numDecodings("123123"));
-        System.out.println(numDecodings("1201234"));
-        System.out.println(numDecodings("1212"));
-        System.out.println(numDecodings("256"));
+        //System.out.println(numDecodings("123123"));
+        //System.out.println(numDecodings("1201234"));
+        //System.out.println(numDecodings("1212"));
+        //System.out.println(numDecodings("256"));
         System.out.println(numDecodings("12"));
         System.out.println(numDecodings("226"));
         System.out.println(numDecodings("2101"));
