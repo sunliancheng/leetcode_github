@@ -16,16 +16,16 @@ public class LC239_Sliding_Window_Maximum {
     }
 
     public int[] maxSlidingWindow(int[] nums, int k) {
-        Deque<int[]> d = new LinkedList<>();
+        Deque<Integer> d = new LinkedList<>();
         int[] ans = new int[nums.length - k + 1];
         for (int i = 0; i < nums.length; ++i) {
-            while(d.size() > 0 && (d.peekLast()[0] <= nums[i] || d.peekLast()[1] <= i - k))
-                d.pollLast();
-            d.addLast(new int[]{nums[i], i});
-            while(d.peekFirst()[1] <= i - k)
+            if (!d.isEmpty() && i == d.peekFirst() + k)
                 d.pollFirst();
+            while (!d.isEmpty() && nums[d.peekLast()] < nums[i])
+                d.pollLast();
+            d.addLast(i);
             if (i >= k - 1)
-                ans[i - k + 1] = d.peekFirst()[0];
+                ans[i - k + 1] = nums[d.peekFirst()];
         }
         return ans;
     }
