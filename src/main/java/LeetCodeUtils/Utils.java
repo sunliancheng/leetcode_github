@@ -86,20 +86,6 @@ public class Utils {
         File file = new File(filePath);
         findAllFiles(null);
         List<Problem> problemList = new ArrayList();
-
-//        try{
-//            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
-//            String s = null;
-//            while((s = br.readLine())!=null){
-//                Problem problem = Problem.generate(s);
-//                if (set.contains(problem.getId()))
-//                    problem.setAnswered(true);
-//                problemList.add(problem);
-//            }
-//            br.close();
-//        }catch(Exception e){
-//            e.printStackTrace();
-//        }
         File outputFile =new File("./src/main/java/outputProblemsList.md");
         Writer out =new FileWriter(outputFile);
         int i = 0;
@@ -133,7 +119,6 @@ public class Utils {
             return o1.getId() > o2.getId() ? 1 : o1.getId() == o2.getId() ? 0 : -1;
         }
     }
-
 
     /**
      * make a plan for this year's leetcode submission
