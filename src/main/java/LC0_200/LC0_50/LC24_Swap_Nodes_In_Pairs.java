@@ -4,22 +4,20 @@ import LeetCodeUtils.ListNode;
 
 public class LC24_Swap_Nodes_In_Pairs {
     public ListNode swapPairs(ListNode head) {
-
-        ListNode parent = new ListNode(), first = null, second = null, hhead = null;
-        parent.next = head; hhead = parent;
-
-        while (hhead.next != null && hhead.next.next != null) {
-            // get first and second node
-            first = hhead.next;
-            second = hhead.next.next;
-            // exchange
-            hhead.next = second;
-            first.next = second.next;
-            second.next = first;
-            // next step
-            hhead = first;
+        ListNode p = head, s = null;
+        if (p != null && p.next != null) {
+            s = p.next;
+            p.next = s.next;
+            s.next = p;
+            head = s;
+            while (p.next != null && p.next.next != null) {
+                s = p.next.next;
+                p.next.next = s.next;
+                s.next = p.next;
+                p.next = s;
+                p = s.next;
+            }
         }
-
-        return parent.next;
+        return head;
     }
 }

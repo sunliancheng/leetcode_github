@@ -5,6 +5,68 @@ import org.junit.Test;
 
 public class LC148_Sort_List {
 
+//    public ListNode sortList(ListNode head) {
+//        return sort(head);
+//    }
+//
+//    public ListNode sort(ListNode head) {
+//        if (head == null || head.next == null)
+//            return null;
+//        if (head.next.next == null) {
+//            // length is equals to 2
+//            if (head.val > head.next.val) {
+//                int tem = head.val;
+//                head.val = head.next.val;
+//                head.next.val = tem;
+//            }
+//            return head;
+//        }
+//
+//        ListNode mid = getMid(head);
+//        ListNode next = mid.next;
+//        mid.next = null;
+//        ListNode left = sort(head);
+//        ListNode right = sort(next);
+//        return merge(left, right);
+//    }
+//
+//    public ListNode getMid(ListNode head) {
+//        ListNode slow = head, fast = head;
+//        while (fast.next != null && fast.next.next != null) {
+//            slow = slow.next;
+//            fast = fast.next.next;
+//        }
+//        return slow;
+//    }
+//
+//    public ListNode merge(ListNode h1, ListNode h2) {
+//        ListNode head = new ListNode(), p = head;
+//        while (h1 != null || h2 != null) {
+//            if (h1 != null && h2 != null) {
+//                if (h1.val < h2.val) {
+//                    p.next = h1;
+//                    h1 = h1.next;
+//                    p = p.next;
+//                } else {
+//                    p.next = h2;
+//                    h2 = h2.next;
+//                    p = p.next;
+//                }
+//            } else if (h1 == null && h2 == null) {
+//                break;
+//            } else if (h1 == null) {
+//                p.next = h2;
+//                h2 = h2.next;
+//                p = p.next;
+//            } else {
+//                p.next = h1;
+//                h1 = h1.next;
+//                p = p.next;
+//            }
+//        }
+//        return head.next;
+//    }
+
 
     public ListNode sortList(ListNode head) {
         if (head == null)
