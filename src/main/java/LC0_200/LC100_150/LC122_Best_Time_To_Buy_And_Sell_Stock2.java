@@ -7,21 +7,27 @@ public class LC122_Best_Time_To_Buy_And_Sell_Stock2 {
 
     @Test
     public void test() {
-        System.out.println(maxProfit(MyMatrix.OneDIntMatrixAdapter("[1,2,3,4,5]")));
+        System.out.println(maxProfit(MyMatrix.OneDIntMatrixAdapter("[7,1,5,3,6,4]")));
     }
-
-
 
     public int maxProfit(int[] prices) {
         int profit = 0;
-        int lastHigh = prices[0], lastLow = prices[0];
-        for (int i = 1; i < prices.length; ++i)
-            if (lastHigh > prices[i]) {
-                profit += lastHigh - lastLow;
-                lastHigh = lastLow = prices[i];
-            } else
-                lastHigh = prices[i];
-        return profit + lastHigh - lastLow;
+        int lastLow = -1;
+        for (int i = 0; i < prices.length; ++i) {
+            if (i == 0) {
+                lastLow = prices[i];
+                continue;
+            }
+            if (i < prices.length - 1 && prices[i] > prices[i + 1]) {
+                profit += Math.max(0, prices[i] - lastLow);
+                lastLow = prices[i];
+            }
+            if (prices[i] < prices[i - 1])
+                lastLow = prices[i];
+            if (i == prices.length - 1)
+                profit += Math.max(0, prices[i] - lastLow);
+        }
+        return profit;
     }
 
     /**
