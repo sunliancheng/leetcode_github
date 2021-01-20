@@ -19,10 +19,7 @@ public class YoloUtils {
         System.out.println(init(MyMatrix.IntMatrixAdapter("[[1,0,0],[0,1,0],[0,0,1]]", 3, 3)));
     }
 
-//    @Test
-//    public void test() {
-//        System.out.println(init(MyMatrix.IntMatrixAdapter("[[0,2,3,4,5,0,0,0,6,7],[1,0,3,4,5,6,0,5,0,0],[2,0,4,5,6,0,0,6,7,1],[0,0,0,0,0,0,0,0,8,9]]", 4, 10)));
-//    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt(), m = sc.nextInt();

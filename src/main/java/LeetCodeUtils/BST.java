@@ -1,15 +1,7 @@
 package LeetCodeUtils;
 
-import java.util.PriorityQueue;
 
 public class BST {
-
-    public static void main(String[] args) {
-        PriorityQueue<Integer> pq = new PriorityQueue<>((o1, o2) -> {return o2 - o1;});
-        pq.add(1); pq.add(0); pq.add(3);
-        System.out.println(pq.poll());
-        StringBuffer sb = new StringBuffer();
-    }
 
     TreeNode root;
 
@@ -77,8 +69,6 @@ public class BST {
     void insert(int v) { insert(root, v); }
 
     void remove(int v) { remove(root, v); }
-
-
 
 }
 

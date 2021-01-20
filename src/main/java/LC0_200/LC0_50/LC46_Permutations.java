@@ -9,6 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class LC46_Permutations {
+
 //    public List<List<Integer>> permute(int[] nums) {
 //
 //        List<LinkedList<Integer>> result = new ArrayList<LinkedList<Integer>>();
@@ -73,6 +74,5 @@ public class LC46_Permutations {
             nums[level] = nums[i]; nums[i] = tem;
         }
     }
-
 
 }

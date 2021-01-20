@@ -13,16 +13,12 @@ public class LC47_Permutations2 {
 
     private List<List<Integer>> res = new ArrayList<>();
     public List<List<Integer>> permuteUnique(int[] nums) {
-
         dfs(nums, 0);
-
         for (List<Integer> ls : res) {
-
             for (Integer i : ls)
                 System.out.print(i);
             System.out.println();
         }
-
         return res;
     }
 
@@ -40,7 +36,6 @@ public class LC47_Permutations2 {
                 continue;
             else
                 used[nums[i] + 10] = true;
-
             int tem = nums[level];
             nums[level] = nums[i]; nums[i] = tem;
             dfs(nums, level + 1);
