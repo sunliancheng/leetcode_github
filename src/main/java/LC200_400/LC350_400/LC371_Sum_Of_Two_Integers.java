@@ -1,6 +1,6 @@
 package LC200_400.LC350_400;
 
-import LeetCodeUtils.BitManipulation;
+
 import org.junit.Test;
 
 /**
