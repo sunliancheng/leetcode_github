@@ -86,8 +86,8 @@ public class Utils {
         File file = new File(filePath);
         findAllFiles(null);
         List<Problem> problemList = new ArrayList();
-        File outputFile =new File("./src/main/java/outputProblemsList.md");
-        Writer out =new FileWriter(outputFile);
+        File outputFile = new File("./src/main/java/outputProblemsList.md");
+        Writer out = new FileWriter(outputFile);
         int i = 0;
 
         Collections.sort(proList, new MyComparator());

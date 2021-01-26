@@ -9,8 +9,5 @@
         <module name="leetcode_github" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="leetcode_github" target="8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
