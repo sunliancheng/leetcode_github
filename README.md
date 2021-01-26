@@ -5,7 +5,7 @@ Some previous Accepted problems will be added in this repo later.
 And my future Accepted problems will be added in this repo after I finishing them. Some of them will have notations.
 
 
-| No. | Title  |
+| 序号 | 题目  |
 | :-----| :---- |
 |1|Two Sum|
 |2|Add Two Numbers|
@@ -104,16 +104,21 @@ And my future Accepted problems will be added in this repo after I finishing the
 |98|Validate Binary Search Tree|
 |99|Recover Binary Search Tree|
 |100|Same Tree|
+|101|Symmetric Tree|
 |104|Maximum Depth Of Binary Tree|
+|105|Construct Binary Tree From Preorder And Inorder Traversal|
 |108|Convert Sorted Array To Binary Search Tree|
 |109|Convert Sorted List To Binary Search Tree|
+|110|Balanced Binary Tree|
 |118|Pascal Triangle|
 |119|Pascal Triangle2|
 |120|Triangle|
 |121|Best Time To Buy And Sell Stock|
 |122|Best Time To Buy And Sell Stock2|
 |123|Best Time To Buy And Sell Stock3|
+|125|Valid Palindrome|
 |126|Word Ladder2|
+|128|Longest Consecutive Sequence|
 |130|Surrounded Regions|
 |134|Gas Station|
 |135|Candy|
@@ -128,13 +133,18 @@ And my future Accepted problems will be added in this repo after I finishing the
 |146|LRU Cache|
 |147|Insertion Sort List|
 |148|Sort List|
+|149|Max Points On A Line|
 |152|Maximum Product Subarray|
 |153|Find Minimum In Rotated Sorted Array|
 |154|Find Minimum In Rotated Sorted Array2|
+|155|Min Stack|
+|160|Intersection Of Two Linked Lists|
 |165|Compare Version Numbers|
 |167|Two Sum2|
+|168|Excel Sheet Column Title|
 |169|Majority Element|
 |171|Excel Sheet Column Number|
+|172|Factorial Trailing Zeros|
 |175|Combine Two Tables|
 |176|Second Highest Salary|
 |177|Nth Highest Salary|
@@ -144,25 +154,37 @@ And my future Accepted problems will be added in this repo after I finishing the
 |182|Duplicate Emails|
 |183|Customers Who Never Order|
 |188|Best Time To Buy And Sell Stock4|
+|190|Reverse Bits|
 |196|Delete Duplicate Emails|
 |198|House Robber|
 |200|Numbers Of Islands|
+|205|Isomorphic Strings|
 |206|Reverse Linked List|
 |207|Course Schedule|
+|210|Course Schedule2|
 |213|House Robber2|
 |216|Combination Sum3|
+|217|Contains Duplicate|
 |218|The Skyline Problem|
 |220|Contains Duplicate3|
+|221|Maximal Square|
 |224|Basic Calculater|
+|225|Implement Stack Using Queue|
 |226|Invert Binary Tree|
+|227|Basic Calculator2|
 |229|Majority Element2|
 |230|Kth Smallest Element In A BST|
 |231|Power Of Two|
+|232|Implement Queue Using Stacks|
 |233|Number Of Digit One|
+|234|Palindrome Linked List|
 |235|Lowest Common Ancestor Of A Binary Search Tree|
 |236|Lowest Common Ancestor Of A Binary Tree|
 |237|Delete Node In A Linked List|
 |239|Sliding Window Maximum|
+|240|Search A 2D Matrix2|
+|241|Different Ways To Add Parentheses|
+|242|Valid Anagram|
 |257|Binary Tree Paths|
 |258|Add Digits|
 |263|Ugly Numer|
@@ -174,11 +196,18 @@ And my future Accepted problems will be added in this repo after I finishing the
 |297|Serialize And Deserialize Binary Tree|
 |299|Bulls And Cows|
 |300|Longest Increasing Subsequence|
+|303|Range Sum Query Immutable|
+|304|Range Sum Query2D Immutable|
 |309|Best Time To Buy And Sell Stock With Cooldown|
+|310|Minimum Height Trees|
+|312|Burst Balloons|
+|313|Super Ugly Number|
 |316|Remove Duplicate Letters|
+|318|Maximum Product Of Word Lengths|
 |322|Coin Change|
 |326|Power Of Three|
 |329|Longest Increasing Path In A Matrix|
+|332|Reconstruct Itinerary|
 |337|House Robber3|
 |338|Counting Bits|
 |340|Longest Substring With At Most K Distinct Characters|
@@ -192,33 +221,55 @@ And my future Accepted problems will be added in this repo after I finishing the
 |399|Evaluate Division|
 |404|Sum Of Left Leaves|
 |406|Queue Reconstruction By Height|
+|409|Longest Palindrome|
+|413|Arithmetic Slices|
+|415|Add Strings|
 |416|Partition Equal Subset Sum|
 |417|Pacific Atlantic Water Flow|
 |421|Maximum XOR Of Two Numbers In An Array|
 |429|N ary Tree Level Order Traversal|
 |435|Non overlapping Intervals|
+|437|Path Sum3|
 |442|Find All Duplicates In An Array|
+|448|Find All Numbers Disappeared In An Array|
 |449|Serialize And Deserialize BST|
 |452|Minimum Number Of Arrows To Bursts Ballons|
 |455|Assign Cookies|
+|461|Hamming Distance|
 |524|Longest Word In Dictionary Through Deleting|
 |540|Single Element In A Sorted Array|
+|543|Diameter Of Binary Tree|
+|560|Subarray Sum Equals K|
+|566|Reshape The Matrix|
 |593|Valid Square|
+|594|Longest Harmonious Subsequence|
 |599|Minimum Index Sum Of Two Lists|
 |605|Can Place Flowers|
 |633|Sum Of Square Numbers|
+|637|Average Of Levels In Binary Tree|
+|647|Palindromic Substrings|
 |653|Two Sum4 Input Is A BST|
 |665|Non Decreasing Array|
 |680|Valid Palindrome2|
 |684|Redundant Connection|
 |695|Max Area Of Island|
+|696|Count Binary Substrings|
+|697|Degree Of An Array|
 |713|Subarray Product Less Than K|
 |763|Partition Labels|
+|769|Max Chunks To Make Sorted|
+|791|Daily Temperatures|
 |832|Flipping An Image|
 |849|Maximize Distance To Closest Person|
+|870|Advantage Shuffle|
+|932|Beautiful Arrays|
 |934|Shortest Bridge|
 |980|Unique Paths3|
 |1041|Robot Bounded In Circle|
 |1094|Car Pooling|
+|1100|Delete Nodes And Return Forest|
+|1143|Longest Common Subsequence|
 |1291|Sequential Digits|
 |1319|Number Of Operations To Make Network Connected|
+|1379|Find A Corresponding Node Of A Binary Tree In A Clone Of That Tree|
+|1640|Check Array Formation Through Concatenation|
