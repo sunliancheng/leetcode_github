@@ -43,7 +43,6 @@ public class TreeNode {
         return root;
     }
 
-
     public static void main(String[] args) {
         TreeNode tree = createTree(3);
         System.out.println(tree.val);
@@ -51,9 +50,6 @@ public class TreeNode {
         System.out.println(tree.right.val);
         System.out.println(tree.left.left.val);
     }
-
-
-
 
     public static TreeNode createTree(int len) {
         Deque<TreeNode> deque = new LinkedList<>();
@@ -71,6 +67,5 @@ public class TreeNode {
         }
         return root;
     }
-
 
 }
