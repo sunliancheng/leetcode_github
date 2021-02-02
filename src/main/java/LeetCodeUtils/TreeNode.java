@@ -57,12 +57,14 @@ public class TreeNode {
         TreeNode root = new TreeNode(i);
         deque.addLast(root);
         while (++i < len) {
-            TreeNode father = deque.getFirst();
+            TreeNode father = deque.removeFirst();
             TreeNode left = new TreeNode(i);
             father.left = left;
+            deque.addLast(father.left);
             if (++i < len) {
                 TreeNode right = new TreeNode(i);
                 father.right = right;
+                deque.addLast(father.right);
             }
         }
         return root;
