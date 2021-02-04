@@ -7,32 +7,23 @@ public class LC669_Trim_A_Binary_Search_Tree {
 
     @Test
     public void test() {
-        trimBST(TreeNode.createTree(3), 1, 2);
+        TreeNode root = TreeNode.createTree(3);
+        root.val = 1;
+        root.left.val = 0;
+        trimBST(root, 1, 2);
     }
 
-
     public TreeNode trimBST(TreeNode root, int low, int high) {
-        trim(root, low, high);
+        if (root == null) return null;
+        if (root.val > high) return trimBST(root.left, low, high);
+        if (root.val < low) return trimBST(root.right, low, high);
+
+        root.left = trimBST(root.left, low, high);
+        root.right = trimBST(root.right, low, high);
         return root;
     }
 
-    public void trim(TreeNode root, int l, int h) {
-        if (root == null)
-            return;
 
-        if (root.val >= l && root.val <= h) {
-            trimBST(root.left, l, h);
-            trimBST(root.right, l, h);
-        } else if (root.val < l) {
-            root.left = null;
-            root = root.right;
-            trim(root, l, h);
-        } else if (root.val > h) {
-            root.right = null;
-            root = root.left;
-            trim(root, l, h);
-        }
-    }
 
     public int removeNode(TreeNode parent, TreeNode node) {
         // 删除节点 = 找到左子树的最大值，交换该节点和最大值节点的值，删除最大值节点
