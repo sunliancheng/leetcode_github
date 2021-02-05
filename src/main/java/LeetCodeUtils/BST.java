@@ -41,7 +41,7 @@ public class BST {
 
     TreeNode findMax(TreeNode t) {
         if (t == null || t.right == null) return t;
-        return findMax(t);
+        return findMax(t.right);
     }
 
     TreeNode remove(TreeNode t, int val) {
@@ -54,10 +54,8 @@ public class BST {
             t.val = temp.val;
             t.right = remove(t.right, t.val);
         } else {
-            temp = t;
             if (t.left == null) t = t.right;
             else if (t.right == null) t = t.left;
-            temp = null;
         }
         return t;
     }
