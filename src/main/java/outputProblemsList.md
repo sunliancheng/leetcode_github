@@ -256,6 +256,7 @@
 |695|Max Area Of Island|
 |696|Count Binary Substrings|
 |697|Degree Of An Array|
+|700|Search In A Binary Search Tree|
 |713|Subarray Product Less Than K|
 |763|Partition Labels|
 |769|Max Chunks To Make Sorted|
