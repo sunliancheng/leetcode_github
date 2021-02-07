@@ -11,41 +11,22 @@ public class LC106_Construct_Binary_Tree_From_Inorder_And_Postorder_Traversal {
         System.out.println(treeNode);
     }
 
-    TreeNode father = null;
-    boolean flag = true;
     public TreeNode buildTree(int[] inorder, int[] postorder) {
-        return createSubTree(0, postorder.length - 1, inorder, postorder);
+        return createSubTree(0, postorder.length - 1, 0, inorder.length - 1, inorder, postorder);
     }
 
-    public TreeNode createSubTree(int ps, int pe, int[] inorder, int[] postorder) {
-        if (pe < 0 || pe < ps) {
-            return null;
+    public TreeNode createSubTree(int is, int ie, int ps, int pe, int[] inorder, int[] postorder) {
+        if (ps > pe || is > ie) return null;
+        TreeNode root = new TreeNode(postorder[pe]);
+        int inIdx = 0;
+        for (int i = is; i <= ie; ++i) {
+            if (root.val == inorder[i])
+                inIdx = i;
         }
-        int pe_val = postorder[pe], root_idx = find(inorder, postorder, pe);
-        if (pe == ps) {
-            return new TreeNode(pe_val);
-        }
-        int p0 = ps, p1 = find(postorder, inorder, root_idx - 1) + 1, p2 = pe - 1, p3 = pe;
-        TreeNode root = new TreeNode(pe_val);
-        if (flag) {
-            flag = false;
-            father = root;
-        }
-        root.left = createSubTree(p0, p1 - 1, inorder, postorder);
-        root.right = createSubTree(p1, p2, inorder, postorder);
+        root.left = createSubTree(is, inIdx - 1, ps, ps + inIdx - is - 1, inorder, postorder);
+        root.right = createSubTree(inIdx + 1, ie, ps + inIdx - is, pe - 1, inorder, postorder);
         return root;
     }
 
-    public int find(int[] target, int[] source, int idx) {
-        if (idx < 0 || idx >= source.length)
-            return -1;
-        int val = source[idx];
-        for (int i = 0; i < target.length; ++i) {
-            if (target[i] == val) {
-                return i;
-            }
-        }
-        return -1;
-    }
 
 }
