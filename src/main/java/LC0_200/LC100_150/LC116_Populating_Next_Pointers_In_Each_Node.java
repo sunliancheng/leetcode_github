@@ -4,6 +4,7 @@ public class LC116_Populating_Next_Pointers_In_Each_Node {
 
     public Node connect(Node root) {
 
+        return null;
     }
 
 }
