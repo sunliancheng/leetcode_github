@@ -1,5 +1,7 @@
 package LC0_200.LC100_150;
 
+import LeetCodeUtils.Node;
+
 public class LC138_Copy_List_With_Random_Pointer {
     public Node copyRandomList(Node head) {
 
@@ -36,14 +38,14 @@ public class LC138_Copy_List_With_Random_Pointer {
     }
 }
 
-class Node {
-    int val;
-    Node next;
-    Node random;
-
-    public Node(int val) {
-        this.val = val;
-        this.next = null;
-        this.random = null;
-    }
-}
+//class Node {
+//    int val;
+//    Node next;
+//    Node random;
+//
+//    public Node(int val) {
+//        this.val = val;
+//        this.next = null;
+//        this.random = null;
+//    }
+//}

@@ -1,5 +1,8 @@
 package LeetCodeUtils;
 
+import com.alibaba.fastjson.util.IdentityHashMap;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Node {
@@ -8,10 +11,10 @@ public class Node {
     public Node right;
     public Node next;
     public List<Node> children;
+    public List<Node> neighbors;
+    public Node random;
+
     public Node() {}
-    public Node(int _val) {
-        val = _val;
-    }
 
     public Node(int _val, List<Node> _children) {
         val = _val;
@@ -24,4 +27,17 @@ public class Node {
         right = _right;
         next = _next;
     }
+
+    public Node(int val) {
+        this.val = val;
+        this.next = null;
+        this.random = null;
+        this.neighbors = new ArrayList<Node>();
+    }
+
+    public Node(int _val, ArrayList<Node> _neighbors) {
+        val = _val;
+        neighbors = _neighbors;
+    }
+
 }
