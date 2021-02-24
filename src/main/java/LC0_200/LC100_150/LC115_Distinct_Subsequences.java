@@ -6,7 +6,7 @@ public class LC115_Distinct_Subsequences {
 
     @Test
     public void test() {
-        System.out.println(numDistinct("rabbbit", "rabbit"));
+        System.out.println(numDistinct("babgbag", "bag"));
     }
 
     public int numDistinct(String s, String t) {
@@ -27,16 +27,17 @@ public class LC115_Distinct_Subsequences {
             dp2 = dp1;
             dp1 = new int[s.length()];
         }
-        return findSmall(dp2, 0);
+
+        int result = 0;
+        for (int i : dp2)
+            result += i;
+        return result;
     }
 
     public int findSmall(int[] dp, int idx) {
         int temp = 0;
-        for (int i = dp.length - 1; i >= idx; --i) {
-            if (dp[i] != 0) {
-                temp += dp[i];
-            }
-        }
+        for (int i = dp.length - 1; i > idx; --i)
+            if (dp[i] != 0) temp += dp[i];
         return temp;
     }
 
