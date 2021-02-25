@@ -57,7 +57,6 @@ public class LC143_Reorder_List {
             }
             head.next = t;
         }
-        System.out.println("d");
 
     }
 
