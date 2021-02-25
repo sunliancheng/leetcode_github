@@ -12,23 +12,34 @@ public class LC143_Reorder_List {
     public void test() {
         ListNode node1 = new ListNode(1);
         ListNode node2 = new ListNode(2);
-        ListNode node3 = new ListNode(3);
-        ListNode node4 = new ListNode(4);
-        node1.next = node2; node2.next = node3; node3.next = node4;
+        //ListNode node3 = new ListNode(3);
+        //ListNode node4 = new ListNode(4);
+        //ListNode node5 = new ListNode(5);
+        //ListNode node6 = new ListNode(6);
+        //ListNode node7 = new ListNode(7);
+        node1.next = node2; //.next = node3; node3.next = node4; node4.next = node5;
+        //node5.next = node6; node6.next = node7;
         reorderList(node1);
     }
 
     Deque<ListNode> deque = new LinkedList<>();
 
     public void reorderList(ListNode head) {
-
-        ListNode fast = head, slow = head;
+        if (head == null || head.next == null) return;
+        boolean flag = false;
+        ListNode fast = head, slow = head, prev = head;
         while (fast != null && fast.next != null) {
+            prev = slow;
             fast = fast.next.next;
-            slow = head.next;
+            slow = slow.next;
+            flag = flag == true ? false : true;
         }
-        add(slow.next);
-        slow.next = null;
+        if (flag) {
+            prev = slow;
+            slow = slow.next;
+        }
+        add(slow);
+        prev.next = null;
         slow = head;
         while (slow != null) {
             ListNode next = slow.next;
@@ -36,7 +47,17 @@ public class LC143_Reorder_List {
             ListNode tem = deque.removeLast();
             tem.next = next;
             slow.next = tem;
+            slow = next;
         }
+        if (deque.size() != 0) {
+            ListNode t = deque.removeLast(), p = head;
+            t.next = null;
+            while (head.next != null) {
+                head = head.next;
+            }
+            head.next = t;
+        }
+        System.out.println("d");
 
     }
 
