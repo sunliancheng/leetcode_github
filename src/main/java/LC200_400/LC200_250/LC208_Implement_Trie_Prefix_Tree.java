@@ -48,7 +48,6 @@ class Trie {
                 if (cur.list[j] != null && cur.list[j].isEndHere) isUsed = true;
             }
             if (start == word.length() - 1 && isUsed) return true;
-
         } else if (cur.list[var - 'a'] == null)
             return false;
         else if (start == word.length() - 1 && cur.list[var - 'a'].isEndHere)
