@@ -84,6 +84,7 @@
 |84|Largest Rectangle In Histogram|
 |85|Maximal Rectangle|
 |86|Partition List|
+|87|Scramble String|
 |88|Merge Sorted Array|
 |89|Gray Code|
 |90|Subsets2|
@@ -171,20 +172,28 @@
 |196|Delete Duplicate Emails|
 |198|House Robber|
 |200|Numbers Of Islands|
+|202|Happy Number|
 |205|Isomorphic Strings|
 |206|Reverse Linked List|
 |207|Course Schedule|
+|208|Implement Trie Prefix Tree|
 |210|Course Schedule2|
+|211|Design Add And Search Words Data Structure|
 |213|House Robber2|
+|215|Kth Largest Element In An Array|
 |216|Combination Sum3|
 |217|Contains Duplicate|
 |218|The Skyline Problem|
+|219|Contains Duplicate2|
 |220|Contains Duplicate3|
 |221|Maximal Square|
+|222|Count Complete Tree Nodes|
+|223|Rectangle Area|
 |224|Basic Calculater|
 |225|Implement Stack Using Queue|
 |226|Invert Binary Tree|
 |227|Basic Calculator2|
+|228|Summary Rangs|
 |229|Majority Element2|
 |230|Kth Smallest Element In A BST|
 |231|Power Of Two|

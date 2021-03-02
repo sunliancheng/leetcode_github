@@ -94,12 +94,19 @@ public class Utils {
         out.write("| 序号 | 题目  |\n" +
                 "| :-----| :---- |\n");
 
+        boolean[] arr = new boolean[2000];
         for (Problem problem : proList) {
             out.write("|" + problem.getId() + "|" + problem.getName() + "|");
             out.write("\n");
+            arr[problem.getId()] = true;
         }
         out.close();
         System.out.println("all number of solved problems here is : " + count);
+
+        System.out.println();
+        for (int j = 0; j < arr.length; ++j) {
+            //if (arr[j] == false) System.out.println(j);
+        }
     }
 
     @Test
