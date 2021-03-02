@@ -180,6 +180,7 @@
 |210|Course Schedule2|
 |211|Design Add And Search Words Data Structure|
 |213|House Robber2|
+|214|Shortest Palindrome|
 |215|Kth Largest Element In An Array|
 |216|Combination Sum3|
 |217|Contains Duplicate|
@@ -203,6 +204,7 @@
 |235|Lowest Common Ancestor Of A Binary Search Tree|
 |236|Lowest Common Ancestor Of A Binary Tree|
 |237|Delete Node In A Linked List|
+|238|Product Of Array Except Self|
 |239|Sliding Window Maximum|
 |240|Search A 2D Matrix2|
 |241|Different Ways To Add Parentheses|
