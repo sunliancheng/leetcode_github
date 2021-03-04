@@ -1,6 +1,8 @@
 307 Range Sum Query
 227
 
+today: 7
+
 import java.util.Scanner;
 public class Main {
     private static int ans = 0;
