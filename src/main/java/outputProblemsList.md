@@ -146,27 +146,34 @@
 |147|Insertion Sort List|
 |148|Sort List|
 |149|Max Points On A Line|
+|151|Reverse Words In A String|
 |152|Maximum Product Subarray|
 |153|Find Minimum In Rotated Sorted Array|
 |154|Find Minimum In Rotated Sorted Array2|
 |155|Min Stack|
 |160|Intersection Of Two Linked Lists|
 |162|Find Peak Element|
+|164|Maximum Gap|
 |165|Compare Version Numbers|
 |167|Two Sum2|
 |168|Excel Sheet Column Title|
 |169|Majority Element|
 |171|Excel Sheet Column Number|
 |172|Factorial Trailing Zeros|
+|173|Binary Search Tree Iterator|
+|174|Dungeon Game|
 |175|Combine Two Tables|
 |176|Second Highest Salary|
 |177|Nth Highest Salary|
 |178|Rank Scores|
+|179|Largest Number|
 |180|Consecutive Numbers|
 |181|Employees Earning More Than Their Managers|
 |182|Duplicate Emails|
 |183|Customers Who Never Order|
+|187|Repeated DNA Sequences|
 |188|Best Time To Buy And Sell Stock4|
+|189|Rotate Array|
 |190|Reverse Bits|
 |191|Numbers Of 1 Bits|
 |196|Delete Duplicate Emails|
@@ -177,8 +184,10 @@
 |206|Reverse Linked List|
 |207|Course Schedule|
 |208|Implement Trie Prefix Tree|
+|209|Minimum Size Subarray Sum|
 |210|Course Schedule2|
 |211|Design Add And Search Words Data Structure|
+|212|Word Search2|
 |213|House Robber2|
 |214|Shortest Palindrome|
 |215|Kth Largest Element In An Array|
@@ -214,6 +223,7 @@
 |263|Ugly Numer|
 |264|Ugly Number2|
 |268|Missing Number|
+|278|First Bad Version|
 |279|Perfect Squares|
 |287|Find The Duplicate Number|
 |290|Word Pattern|
