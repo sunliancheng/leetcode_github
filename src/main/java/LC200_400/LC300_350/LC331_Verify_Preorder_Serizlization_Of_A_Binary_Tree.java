@@ -8,12 +8,14 @@ public class LC331_Verify_Preorder_Serizlization_Of_A_Binary_Tree {
 
     @Test
     public void test() {
-        System.out.println(isValidSerialization("9,3,#,#,4,#"));
+        System.out.println(isValidSerialization("9,#"));
     }
 
     public boolean isValidSerialization(String preorder) {
         String[] split = preorder.split(",");
         dfs(split);
+        System.out.println(idx == split.length - 1);
+        System.out.println(split[idx].equals("#"));
         return idx == split.length - 1 && split[idx].equals("#");
     }
 
