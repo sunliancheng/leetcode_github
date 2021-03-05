@@ -220,13 +220,19 @@
 |242|Valid Anagram|
 |257|Binary Tree Paths|
 |258|Add Digits|
+|260|Single Number3|
 |263|Ugly Numer|
 |264|Ugly Number2|
 |268|Missing Number|
+|274|H Index|
+|275|H Index2|
 |278|First Bad Version|
 |279|Perfect Squares|
+|283|Move Zeros|
 |287|Find The Duplicate Number|
+|289|Game Of Life|
 |290|Word Pattern|
+|292|Nim Game|
 |297|Serialize And Deserialize Binary Tree|
 |299|Bulls And Cows|
 |300|Longest Increasing Subsequence|
@@ -240,12 +246,18 @@
 |318|Maximum Product Of Word Lengths|
 |322|Coin Change|
 |326|Power Of Three|
+|328|Odd Even Linked List|
 |329|Longest Increasing Path In A Matrix|
 |332|Reconstruct Itinerary|
+|334|Increasing Triplet Subsequence|
 |337|House Robber3|
 |338|Counting Bits|
 |340|Longest Substring With At Most K Distinct Characters|
+|341|Flatten Nested List Iterator|
 |342|Power Of Four|
+|343|Integer Break|
+|344|Reverse String|
+|345|Reverse Vowels Of A String|
 |349|Intersection Of Two Arrays|
 |350|Intersection Of Two Arrays2|
 |357|Count Numbers With Unique Digits|
