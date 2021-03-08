@@ -12,13 +12,9 @@ public class LC18_4_Sum {
         int target_temp;
 
         for(int i = 0; i < nums.length - 3; i++){
-
             if(i != 0 && nums[i] == nums[i - 1]) continue;
-
             for(int j = i + 1; j < nums.length - 2; j++){
-
                 if(j != i + 1 && nums[j] == nums[j - 1]) continue;
-
                 int lowPtr = j + 1; int highPtr = nums.length - 1;
                 target_temp = target - (nums[i] + nums[j]);
 
@@ -26,7 +22,6 @@ public class LC18_4_Sum {
 
                     if(lowPtr != j + 1 && nums[lowPtr] == nums[lowPtr - 1]) {++lowPtr; continue;}
                     if(highPtr != nums.length - 1 && nums[highPtr] == nums[highPtr + 1]) {--highPtr; continue;}
-
                     if(nums[lowPtr] + nums[highPtr] == target_temp){
                         result.add(Arrays.asList(nums[i], nums[j], nums[lowPtr], nums[highPtr]));
                         ++lowPtr;

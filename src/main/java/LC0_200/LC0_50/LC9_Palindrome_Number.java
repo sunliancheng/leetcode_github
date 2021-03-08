@@ -9,7 +9,6 @@ public class LC9_Palindrome_Number {
             if (low >= high) {
                 return true;
             }
-
             if (s.charAt(low) != s.charAt(high)) {
                 return false;
             } else {

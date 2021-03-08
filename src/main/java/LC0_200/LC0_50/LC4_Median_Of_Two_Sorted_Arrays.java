@@ -77,12 +77,7 @@ public class LC4_Median_Of_Two_Sorted_Arrays {
                 nums1 = nums2;
                 nums2 = tem;
             }
-
-
         }
-
         return 0.0;
-
-
     }
 }

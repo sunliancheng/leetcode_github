@@ -45,12 +45,9 @@ public class LC13_Roman_To_Integer {
                     continue;
                 }
             }
-
             result += map.get(String.valueOf(s.charAt(i)));
-
         }
         return result;
-
     }
 
 }
