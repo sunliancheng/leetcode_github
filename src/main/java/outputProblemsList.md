@@ -233,9 +233,11 @@
 |289|Game Of Life|
 |290|Word Pattern|
 |292|Nim Game|
+|295|Find Median From Data Stream|
 |297|Serialize And Deserialize Binary Tree|
 |299|Bulls And Cows|
 |300|Longest Increasing Subsequence|
+|301|Remove Invalid Parentheses|
 |303|Range Sum Query Immutable|
 |304|Range Sum Query2D Immutable|
 |309|Best Time To Buy And Sell Stock With Cooldown|
@@ -244,10 +246,12 @@
 |313|Super Ugly Number|
 |316|Remove Duplicate Letters|
 |318|Maximum Product Of Word Lengths|
+|319|Bulb Switcher|
 |322|Coin Change|
 |326|Power Of Three|
 |328|Odd Even Linked List|
 |329|Longest Increasing Path In A Matrix|
+|331|Verify Preorder Serizlization Of A Binary Tree|
 |332|Reconstruct Itinerary|
 |334|Increasing Triplet Subsequence|
 |337|House Robber3|
@@ -283,7 +287,11 @@
 |452|Minimum Number Of Arrows To Bursts Ballons|
 |455|Assign Cookies|
 |461|Hamming Distance|
+|491|Increasing Subsequences|
+|494|Target Sum|
 |501|Find Mode In Binary Search Tree|
+|513|FInd Bottom Left Tree Value|
+|515|Find Largest Value In Each Tree Row|
 |524|Longest Word In Dictionary Through Deleting|
 |540|Single Element In A Sorted Array|
 |543|Diameter Of Binary Tree|
@@ -293,6 +301,7 @@
 |594|Longest Harmonious Subsequence|
 |599|Minimum Index Sum Of Two Lists|
 |605|Can Place Flowers|
+|623|Add One Row To Tree|
 |633|Sum Of Square Numbers|
 |637|Average Of Levels In Binary Tree|
 |647|Palindromic Substrings|
@@ -321,7 +330,9 @@
 |1094|Car Pooling|
 |1100|Delete Nodes And Return Forest|
 |1143|Longest Common Subsequence|
+|1161|Maximum Level Sum Of A Binary Tree|
 |1291|Sequential Digits|
 |1319|Number Of Operations To Make Network Connected|
 |1379|Find A Corresponding Node Of A Binary Tree In A Clone Of That Tree|
 |1640|Check Array Formation Through Concatenation|
+|1786|Number Of Restricted Path From First To Last Node|
