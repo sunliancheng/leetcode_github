@@ -20,7 +20,6 @@ public class LC725_Split_Linked_List_In_Parts {
         }
 
         int width = N / k, rem = N % k;
-
         ListNode[] ans = new ListNode[k];
         cur = root;
         for (int i = 0; i < k; ++i) {
