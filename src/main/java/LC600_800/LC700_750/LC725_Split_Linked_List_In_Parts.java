@@ -25,9 +25,9 @@ public class LC725_Split_Linked_List_In_Parts {
         cur = root;
         for (int i = 0; i < k; ++i) {
             ListNode head = cur;
-            for (int j = 0; j < width + (i < rem ? 1 : 0) - 1; ++j) {
+            for (int j = 0; j < width + (i < rem ? 1 : 0) - 1; ++j)
                 if (cur != null) cur = cur.next;
-            }
+
             if (cur != null) {
                 ListNode prev = cur;
                 cur = cur.next;
