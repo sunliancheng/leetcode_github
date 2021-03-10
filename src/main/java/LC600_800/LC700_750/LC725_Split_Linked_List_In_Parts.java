@@ -37,5 +37,4 @@ public class LC725_Split_Linked_List_In_Parts {
         return ans;
     }
 
-
 }
