@@ -180,6 +180,7 @@
 |198|House Robber|
 |200|Numbers Of Islands|
 |202|Happy Number|
+|203|Remove Linked List Elements|
 |205|Isomorphic Strings|
 |206|Reverse Linked List|
 |207|Course Schedule|
@@ -233,9 +234,11 @@
 |289|Game Of Life|
 |290|Word Pattern|
 |292|Nim Game|
+|295|Find Median From Data Stream|
 |297|Serialize And Deserialize Binary Tree|
 |299|Bulls And Cows|
 |300|Longest Increasing Subsequence|
+|301|Remove Invalid Parentheses|
 |303|Range Sum Query Immutable|
 |304|Range Sum Query2D Immutable|
 |309|Best Time To Buy And Sell Stock With Cooldown|
@@ -244,10 +247,12 @@
 |313|Super Ugly Number|
 |316|Remove Duplicate Letters|
 |318|Maximum Product Of Word Lengths|
+|319|Bulb Switcher|
 |322|Coin Change|
 |326|Power Of Three|
 |328|Odd Even Linked List|
 |329|Longest Increasing Path In A Matrix|
+|331|Verify Preorder Serizlization Of A Binary Tree|
 |332|Reconstruct Itinerary|
 |334|Increasing Triplet Subsequence|
 |337|House Robber3|
@@ -277,13 +282,18 @@
 |435|Non overlapping Intervals|
 |437|Path Sum3|
 |442|Find All Duplicates In An Array|
+|445|Add Two Numbers2|
 |448|Find All Numbers Disappeared In An Array|
 |449|Serialize And Deserialize BST|
 |450|Delete Node In A BST|
 |452|Minimum Number Of Arrows To Bursts Ballons|
 |455|Assign Cookies|
 |461|Hamming Distance|
+|491|Increasing Subsequences|
+|494|Target Sum|
 |501|Find Mode In Binary Search Tree|
+|513|FInd Bottom Left Tree Value|
+|515|Find Largest Value In Each Tree Row|
 |524|Longest Word In Dictionary Through Deleting|
 |540|Single Element In A Sorted Array|
 |543|Diameter Of Binary Tree|
@@ -293,6 +303,7 @@
 |594|Longest Harmonious Subsequence|
 |599|Minimum Index Sum Of Two Lists|
 |605|Can Place Flowers|
+|623|Add One Row To Tree|
 |633|Sum Of Square Numbers|
 |637|Average Of Levels In Binary Tree|
 |647|Palindromic Substrings|
@@ -306,12 +317,14 @@
 |697|Degree Of An Array|
 |700|Search In A Binary Search Tree|
 |713|Subarray Product Less Than K|
+|725|Split Linked List In Parts|
 |763|Partition Labels|
 |769|Max Chunks To Make Sorted|
 |791|Daily Temperatures|
 |832|Flipping An Image|
 |849|Maximize Distance To Closest Person|
 |870|Advantage Shuffle|
+|876|Middle Of The Linked List|
 |932|Beautiful Arrays|
 |934|Shortest Bridge|
 |980|Unique Paths3|
@@ -321,7 +334,11 @@
 |1094|Car Pooling|
 |1100|Delete Nodes And Return Forest|
 |1143|Longest Common Subsequence|
+|1161|Maximum Level Sum Of A Binary Tree|
+|1290|Convert Binary Number In A Linked List To Integer|
 |1291|Sequential Digits|
 |1319|Number Of Operations To Make Network Connected|
 |1379|Find A Corresponding Node Of A Binary Tree In A Clone Of That Tree|
 |1640|Check Array Formation Through Concatenation|
+|1721|Swapping Nodes In A Linked List|
+|1786|Number Of Restricted Path From First To Last Node|
