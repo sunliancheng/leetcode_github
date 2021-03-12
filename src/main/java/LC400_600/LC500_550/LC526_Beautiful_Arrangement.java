@@ -6,7 +6,6 @@ public class LC526_Beautiful_Arrangement {
 
     @Test
     public void test() {
-
     }
 
     int count = 0;
