@@ -114,6 +114,7 @@
 |114|Flatten Binary Tree To Linked List|
 |115|Distinct Subsequences|
 |116|Populating Next Pointers In Each Node|
+|117|Populating Next Pointers In Each Node2|
 |118|Pascal Triangle|
 |119|Pascal Triangle2|
 |120|Triangle|
@@ -289,6 +290,7 @@
 |452|Minimum Number Of Arrows To Bursts Ballons|
 |455|Assign Cookies|
 |461|Hamming Distance|
+|473|Matchsticks To Square|
 |491|Increasing Subsequences|
 |494|Target Sum|
 |501|Find Mode In Binary Search Tree|
@@ -340,5 +342,6 @@
 |1319|Number Of Operations To Make Network Connected|
 |1379|Find A Corresponding Node Of A Binary Tree In A Clone Of That Tree|
 |1640|Check Array Formation Through Concatenation|
+|1670|Design Front Middle Back Queue|
 |1721|Swapping Nodes In A Linked List|
 |1786|Number Of Restricted Path From First To Last Node|
