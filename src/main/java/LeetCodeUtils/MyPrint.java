@@ -1,6 +1,33 @@
 package LeetCodeUtils;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class MyPrint {
+
+    /**
+     *
+     * @param root
+     */
+    public static void printTreeInLevelOrder(TreeNode root) {
+        if (root == null) {
+            System.out.println("The tree is null, return...");
+            return;
+        }
+        LinkedList<TreeNode> list = new LinkedList<>();
+        list.addLast(root);
+        while (list.size() != 0) {
+            int size = list.size();
+            while (--size >= 0) {
+                TreeNode tem = list.removeFirst();
+                if(tem.left != null) list.addLast(tem.left);
+                if(tem.right != null) list.addLast(tem.right);
+                System.out.print(tem.val + " ");
+            }
+            System.out.println();
+        }
+
+    }
 
     /**
      *  print the 2D boolean matrix

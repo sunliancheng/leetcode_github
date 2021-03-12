@@ -1,12 +1,53 @@
 package LC200_400.LC300_350;
 
+import LeetCodeUtils.MyPrint;
 import LeetCodeUtils.TreeNode;
+import org.junit.Test;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class LC337_House_Robber3 {
 
-    public int rob(TreeNode root) {
+    @Test
+    public void test() {
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.right = new TreeNode(3);
+        root.right.right = new TreeNode(1);
+        System.out.println(rob(root));
+    }
 
-        return 1;
+
+
+    public int rob(TreeNode root) {
+        Map<TreeNode, int[]> map = new HashMap<>();
+        return Math.max(dfs(root, 1, map), dfs(root, 0, map));
+    }
+
+    public int dfs (TreeNode root, int canSteal, Map<TreeNode, int[]> memory) {
+        int[] tem = memory.getOrDefault(root, new int[2]);
+        if (tem[canSteal] != 0) return tem[canSteal];
+        if (root == null || (root.left == null && root.right == null && canSteal == 0)) return 0;
+        if (root.left == null && root.right == null && canSteal == 1) {
+            tem[canSteal] = root.val;
+            memory.put(root, tem);
+            return root.val;
+        }
+
+        if (canSteal == 1) {
+            int re =  root.val + dfs(root.left, 0, memory) + dfs(root.right, 0, memory);
+            tem[canSteal] = re;
+            memory.put(root, tem);
+            return re;
+        } else {
+            int re = Math.max(dfs(root.left, 0, memory), dfs(root.left, 1, memory))
+                    + Math.max(dfs(root.right, 0, memory), dfs(root.right, 1, memory));
+            tem[canSteal] = re;
+            memory.put(root, tem);
+            return re;
+        }
     }
 
     /**
