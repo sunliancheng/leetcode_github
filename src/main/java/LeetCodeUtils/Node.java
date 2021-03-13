@@ -10,6 +10,8 @@ public class Node {
     public Node left;
     public Node right;
     public Node next;
+    public Node child;
+    public Node prev;
     public List<Node> children;
     public List<Node> neighbors;
     public Node random;
