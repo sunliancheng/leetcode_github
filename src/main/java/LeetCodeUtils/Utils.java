@@ -142,4 +142,15 @@ public class Utils {
         double per = (3 * 5 + 2 * 5) / 7.0;
         System.out.println(i + " " + dis / per);
     }
+
+    @Test
+    public void test() {
+        double a = cal(4.35, 1, 300000);
+        double b = cal(4.5, 1, 300000);
+        System.out.println(2 * (a + b));
+    }
+
+    public double cal(double l, int month, double money) {
+        return money * l / 100 * month / 12;
+    }
 }
