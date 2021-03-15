@@ -15,6 +15,7 @@ public class LC690_Employee_Importance {
         int ans = employee.importance;
         for (Integer subid: employee.subordinates)
             ans += dfs(subid);
+
         return ans;
     }
 
