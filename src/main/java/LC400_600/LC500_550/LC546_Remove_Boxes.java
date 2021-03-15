@@ -40,7 +40,6 @@ public class LC546_Remove_Boxes {
             n = n * n;
             int fi = n + remove(tem, map);
             re = Math.max(re, fi);
-
         }
         map.put(list, re);
         return re;
