@@ -10,10 +10,6 @@ public class LC546_Remove_Boxes {
 
     @Test
     public void test() {
-        //List<Integer> list = new ArrayList<>();
-        //list.add(2); list.add(2); list.add(1); list.add(2); list.add(1);
-        //List<Integer> delete = delete(list, 0);
-
         System.out.println(removeBoxes(new int[]{1,3,2,2,2,3,4,3,1}));
         //List<Integer> list = new ArrayList<>();
         //for (int i : new int[]{1,3,2,2,2,3,4,3,1}) list.add(i);
