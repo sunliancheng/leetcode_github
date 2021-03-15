@@ -42,6 +42,7 @@ public class LC546_Remove_Boxes {
     }
 
     public List<Integer> delete(List<Integer> list, int start) {
+        // 可以记录连续的位置，这样不用每次都重新找了
         List<Integer> tem = new ArrayList<>();
         boolean flag = false;
         int first = list.get(start), end = start;
