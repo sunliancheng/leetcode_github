@@ -280,6 +280,7 @@
 |417|Pacific Atlantic Water Flow|
 |421|Maximum XOR Of Two Numbers In An Array|
 |429|N ary Tree Level Order Traversal|
+|430|Flatten A Multilevel Doubly Linked List|
 |435|Non overlapping Intervals|
 |437|Path Sum3|
 |442|Find All Duplicates In An Array|
@@ -290,17 +291,23 @@
 |452|Minimum Number Of Arrows To Bursts Ballons|
 |455|Assign Cookies|
 |461|Hamming Distance|
+|472|Concatenated Words|
 |473|Matchsticks To Square|
+|488|Zuma Game|
 |491|Increasing Subsequences|
 |494|Target Sum|
 |501|Find Mode In Binary Search Tree|
 |513|FInd Bottom Left Tree Value|
 |515|Find Largest Value In Each Tree Row|
 |524|Longest Word In Dictionary Through Deleting|
+|526|Beautiful Arrangement|
+|529|Minesweeper|
 |540|Single Element In A Sorted Array|
 |543|Diameter Of Binary Tree|
 |560|Subarray Sum Equals K|
+|563|Binary Tree Tilt|
 |566|Reshape The Matrix|
+|576|Out Of Boundary Paths|
 |593|Valid Square|
 |594|Longest Harmonious Subsequence|
 |599|Minimum Index Sum Of Two Lists|
@@ -308,16 +315,20 @@
 |623|Add One Row To Tree|
 |633|Sum Of Square Numbers|
 |637|Average Of Levels In Binary Tree|
+|638|Shopping Offers|
 |647|Palindromic Substrings|
 |653|Two Sum4 Input Is A BST|
 |665|Non Decreasing Array|
 |669|Trim A Binary Search Tree|
+|679|24 Game|
 |680|Valid Palindrome2|
 |684|Redundant Connection|
+|690|Employee Importance|
 |695|Max Area Of Island|
 |696|Count Binary Substrings|
 |697|Degree Of An Array|
 |700|Search In A Binary Search Tree|
+|707|Design Linked List|
 |713|Subarray Product Less Than K|
 |725|Split Linked List In Parts|
 |763|Partition Labels|
@@ -332,6 +343,7 @@
 |980|Unique Paths3|
 |987|Vertical Order Traversal Of A Binary Tree|
 |993|Cousins In Binary Tree|
+|1019|Next Greater Node In Linked List|
 |1041|Robot Bounded In Circle|
 |1094|Car Pooling|
 |1100|Delete Nodes And Return Forest|

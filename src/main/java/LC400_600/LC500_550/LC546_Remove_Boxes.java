@@ -18,41 +18,26 @@ public class LC546_Remove_Boxes {
         //System.out.println(removeBoxes(new int[]{1,2,1}));
     }
 
+    int[][][] dp = new int[100][100][100];
+
     public int removeBoxes(int[] boxes) {
-        List<Integer> list = new ArrayList<>();
-        for (int i : boxes) list.add(i);
-        Map<List<Integer>, Integer> map = new HashMap<>();
-        return remove(list, map);
+        return dfs(0, boxes.length - 1, 0, boxes);
     }
 
-    public int remove(List<Integer> list, Map<List<Integer>, Integer> map) {
-        if (map.containsKey(list)) return map.get(list);
-        if (list.size() == 0 || list.size() == 1) return list.size();
-        int re = 0;
-        for (int i = 0; i < list.size(); ++i) {
-            List<Integer> tem = delete(list, i);
-            int n = list.size() - tem.size();
-            i += n - 1;
-            n = n * n;
-            int fi = n + remove(tem, map);
-            re = Math.max(re, fi);
+    public int dfs(int l, int r, int k, int[] boxes) {
+        if (l > r) return 0;
+        if (dp[l][r][k] > 0) return dp[l][r][k];
+        dp[l][r][k] = dfs(l, r - 1, 0, boxes) + (k + 1) * (k + 1);
+        for (int i = r - 1; i >= 1; --i) {
+            if (boxes[i] != boxes[r]) continue;
+            int points = dfs(i + 1, r - 1, 0, boxes) + dfs(l, i, k + 1, boxes);
+            dp[l][r][k] = Math.max(dp[l][r][k], points);
         }
-        map.put(list, re);
-        return re;
+        return dp[l][r][k];
     }
 
-    public List<Integer> delete(List<Integer> list, int start) {
-        // 可以记录连续的位置，这样不用每次都重新找了
-        List<Integer> tem = new ArrayList<>();
-        boolean flag = false;
-        int first = list.get(start), end = start;
-        for (int i = 0; i < list.size(); ++i) {
-            if (!flag && i > start && list.get(i) == first) end = i;
-            else if (i > start) flag = true;
-            if (i < start || i > end) tem.add(list.get(i));
-        }
-        return tem;
-    }
+
+
 
 
 
