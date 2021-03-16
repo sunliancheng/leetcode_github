@@ -3,8 +3,8 @@ package LC200_400.LC350_400;
 import java.util.*;
 
 public class LC380_Insert_Delete_GetRandom_O1 {
-}
 
+}
 
 class RandomizedSet {
 
