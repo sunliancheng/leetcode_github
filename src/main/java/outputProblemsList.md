@@ -182,6 +182,7 @@
 |200|Numbers Of Islands|
 |202|Happy Number|
 |203|Remove Linked List Elements|
+|204|Count Primes|
 |205|Isomorphic Strings|
 |206|Reverse Linked List|
 |207|Course Schedule|
@@ -269,6 +270,9 @@
 |357|Count Numbers With Unique Digits|
 |365|Water And Jug Problem|
 |371|Sum Of Two Integers|
+|380|Insert Delete GetRandom O1|
+|387|First Unique Character In A String|
+|389|Find The Difference|
 |394|Decode String|
 |399|Evaluate Division|
 |404|Sum Of Left Leaves|
@@ -285,9 +289,11 @@
 |437|Path Sum3|
 |442|Find All Duplicates In An Array|
 |445|Add Two Numbers2|
+|447|Number Of Boomerangs|
 |448|Find All Numbers Disappeared In An Array|
 |449|Serialize And Deserialize BST|
 |450|Delete Node In A BST|
+|451|Sort Characters By Frequency|
 |452|Minimum Number Of Arrows To Bursts Ballons|
 |455|Assign Cookies|
 |461|Hamming Distance|
@@ -296,6 +302,7 @@
 |488|Zuma Game|
 |491|Increasing Subsequences|
 |494|Target Sum|
+|500|Keyboard Row|
 |501|Find Mode In Binary Search Tree|
 |513|FInd Bottom Left Tree Value|
 |515|Find Largest Value In Each Tree Row|
@@ -304,9 +311,11 @@
 |529|Minesweeper|
 |540|Single Element In A Sorted Array|
 |543|Diameter Of Binary Tree|
+|546|Remove Boxes|
 |560|Subarray Sum Equals K|
 |563|Binary Tree Tilt|
 |566|Reshape The Matrix|
+|575|Distribute Candies|
 |576|Out Of Boundary Paths|
 |593|Valid Square|
 |594|Longest Harmonious Subsequence|
@@ -316,6 +325,7 @@
 |633|Sum Of Square Numbers|
 |637|Average Of Levels In Binary Tree|
 |638|Shopping Offers|
+|645|Set Mismatch|
 |647|Palindromic Substrings|
 |653|Two Sum4 Input Is A BST|
 |665|Non Decreasing Array|
