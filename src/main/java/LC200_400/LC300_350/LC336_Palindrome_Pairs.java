@@ -15,11 +15,15 @@ public class LC336_Palindrome_Pairs {
     public List<List<Integer>> palindromePairs(String[] words) {
         List<List<Integer>> re = new ArrayList<>();
         for (int i = 0; i < words.length; ++i) {
-            for (int j = 0; j < words.length; ++j) {
-                if (i == j) continue;
+            for (int j = i + 1; j < words.length; ++j) {
                 if (check(words, i, j)) {
                     List<Integer> t = new ArrayList<>();
                     t.add(i); t.add(j);
+                    re.add(t);
+                }
+                if (check(words, j, i)) {
+                    List<Integer> t = new ArrayList<>();
+                    t.add(j); t.add(i);
                     re.add(t);
                 }
             }
