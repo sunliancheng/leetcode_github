@@ -39,8 +39,8 @@ public class LC407_Trapping_Rain_Water2 {
             int[] node = pq.poll();
             handle(pq, heightMap, node[0], node[1], node[2], visited);
         }
-        MyPrint.print2DMatrix(heightMap);
-        MyPrint.print2DMatrix(visited);
+        //MyPrint.print2DMatrix(heightMap);
+        //MyPrint.print2DMatrix(visited);
         pq.clear();
         for (int i = 0; i < visited.length; ++i)
             for (int j = 0; j < visited[0].length; ++j)
@@ -60,6 +60,11 @@ public class LC407_Trapping_Rain_Water2 {
         } else {
             if (visited[i][j] == 0) visited[i][j] = h;
             visited[i][j] = Math.min(visited[i][j], h);
+            for (int k = 0; k < directions.length - 1; ++k) {
+                int x = directions[k] + i, y = directions[k + 1] + j;
+                if (x >= 0 && y >= 0 && x <= visited.length - 1 && y <= visited[0].length - 1 && visited[x][y] != -1 && visited[x][y] != 0)
+                    visited[i][j] = Math.min(visited[i][j], visited[x][y]);
+            }
         }
     }
 
