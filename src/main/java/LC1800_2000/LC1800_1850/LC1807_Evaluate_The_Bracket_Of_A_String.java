@@ -12,9 +12,9 @@ public class LC1807_Evaluate_The_Bracket_Of_A_String {
 
     public String evaluate(String s, List<List<String>> knowledge) {
         Stack<Character> stack = new Stack<>();
-        for (List<String> ls : knowledge) {
+        for (List<String> ls : knowledge)
             map.put(ls.get(0), ls.get(1));
-        }
+
         add(s);
         return sb.toString();
     }
