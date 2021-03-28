@@ -36,5 +36,4 @@ public class LC1807_Evaluate_The_Bracket_Of_A_String {
             add(s.substring(end + 1));
         }
     }
-
 }
