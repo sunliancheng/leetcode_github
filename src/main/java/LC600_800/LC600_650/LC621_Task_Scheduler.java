@@ -27,6 +27,7 @@ public class LC621_Task_Scheduler {
                 int poll = pq.poll();
                 list.add(poll);
             }
+
             for (int t : list) {
                 --t;
                 if (t > 0) pq.offer(t);
