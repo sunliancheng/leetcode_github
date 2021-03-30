@@ -4,7 +4,6 @@ Some previous Accepted problems will be added in this repo later.
 
 And my future Accepted problems will be added in this repo after I finishing them. Some of them will have notations.
 
-
 | 序号 | 题目  |
 | :-----| :---- |
 |1|Two Sum|
@@ -76,6 +75,7 @@ And my future Accepted problems will be added in this repo after I finishing the
 |67|Add Binary|
 |69|Sqrt|
 |70|Climbing Stairs|
+|71|Simplify Path|
 |72|Edit Distance|
 |73|Set Matrix Zeros|
 |74|Search A 2D Matrix|
@@ -189,6 +189,7 @@ And my future Accepted problems will be added in this repo after I finishing the
 |200|Numbers Of Islands|
 |202|Happy Number|
 |203|Remove Linked List Elements|
+|204|Count Primes|
 |205|Isomorphic Strings|
 |206|Reverse Linked List|
 |207|Course Schedule|
@@ -249,6 +250,7 @@ And my future Accepted problems will be added in this repo after I finishing the
 |301|Remove Invalid Parentheses|
 |303|Range Sum Query Immutable|
 |304|Range Sum Query2D Immutable|
+|307|Range Sum Query Mutable|
 |309|Best Time To Buy And Sell Stock With Cooldown|
 |310|Minimum Height Trees|
 |312|Burst Balloons|
@@ -257,12 +259,14 @@ And my future Accepted problems will be added in this repo after I finishing the
 |318|Maximum Product Of Word Lengths|
 |319|Bulb Switcher|
 |322|Coin Change|
+|324|Wiggle Sort2|
 |326|Power Of Three|
 |328|Odd Even Linked List|
 |329|Longest Increasing Path In A Matrix|
 |331|Verify Preorder Serizlization Of A Binary Tree|
 |332|Reconstruct Itinerary|
 |334|Increasing Triplet Subsequence|
+|336|Palindrome Pairs|
 |337|House Robber3|
 |338|Counting Bits|
 |340|Longest Substring With At Most K Distinct Characters|
@@ -271,16 +275,26 @@ And my future Accepted problems will be added in this repo after I finishing the
 |343|Integer Break|
 |344|Reverse String|
 |345|Reverse Vowels Of A String|
+|347|Top K Frequent Elements|
 |349|Intersection Of Two Arrays|
 |350|Intersection Of Two Arrays2|
 |357|Count Numbers With Unique Digits|
 |365|Water And Jug Problem|
 |371|Sum Of Two Integers|
+|378|Kth Smallest Element In A Sorted Matrix|
+|380|Insert Delete GetRandom O1|
+|384|Suffle An Array|
+|387|First Unique Character In A String|
+|389|Find The Difference|
 |394|Decode String|
+|395|Longest Substring With At Least K Repeating Characters|
+|398|Random Pick Index|
 |399|Evaluate Division|
 |404|Sum Of Left Leaves|
 |406|Queue Reconstruction By Height|
+|407|Trapping Rain Water2|
 |409|Longest Palindrome|
+|412|Fizz Buzz|
 |413|Arithmetic Slices|
 |415|Add Strings|
 |416|Partition Equal Subset Sum|
@@ -290,11 +304,14 @@ And my future Accepted problems will be added in this repo after I finishing the
 |430|Flatten A Multilevel Doubly Linked List|
 |435|Non overlapping Intervals|
 |437|Path Sum3|
+|438|Find All Anagrams In A String|
 |442|Find All Duplicates In An Array|
 |445|Add Two Numbers2|
+|447|Number Of Boomerangs|
 |448|Find All Numbers Disappeared In An Array|
 |449|Serialize And Deserialize BST|
 |450|Delete Node In A BST|
+|451|Sort Characters By Frequency|
 |452|Minimum Number Of Arrows To Bursts Ballons|
 |455|Assign Cookies|
 |461|Hamming Distance|
@@ -303,6 +320,7 @@ And my future Accepted problems will be added in this repo after I finishing the
 |488|Zuma Game|
 |491|Increasing Subsequences|
 |494|Target Sum|
+|500|Keyboard Row|
 |501|Find Mode In Binary Search Tree|
 |513|FInd Bottom Left Tree Value|
 |515|Find Largest Value In Each Tree Row|
@@ -311,18 +329,24 @@ And my future Accepted problems will be added in this repo after I finishing the
 |529|Minesweeper|
 |540|Single Element In A Sorted Array|
 |543|Diameter Of Binary Tree|
+|546|Remove Boxes|
 |560|Subarray Sum Equals K|
 |563|Binary Tree Tilt|
 |566|Reshape The Matrix|
+|575|Distribute Candies|
 |576|Out Of Boundary Paths|
+|581|Shortest Unsorted Continuous Subarray|
 |593|Valid Square|
 |594|Longest Harmonious Subsequence|
 |599|Minimum Index Sum Of Two Lists|
 |605|Can Place Flowers|
+|617|Merge Two Binary Trees|
+|621|Task Scheduler|
 |623|Add One Row To Tree|
 |633|Sum Of Square Numbers|
 |637|Average Of Levels In Binary Tree|
 |638|Shopping Offers|
+|645|Set Mismatch|
 |647|Palindromic Substrings|
 |653|Two Sum4 Input Is A BST|
 |665|Non Decreasing Array|
@@ -340,11 +364,13 @@ And my future Accepted problems will be added in this repo after I finishing the
 |725|Split Linked List In Parts|
 |763|Partition Labels|
 |769|Max Chunks To Make Sorted|
+|786|K th Smallest Prime Fraction|
 |791|Daily Temperatures|
 |832|Flipping An Image|
 |849|Maximize Distance To Closest Person|
 |870|Advantage Shuffle|
 |876|Middle Of The Linked List|
+|916|Word Subsets|
 |932|Beautiful Arrays|
 |934|Shortest Bridge|
 |980|Unique Paths3|
@@ -355,13 +381,21 @@ And my future Accepted problems will be added in this repo after I finishing the
 |1094|Car Pooling|
 |1100|Delete Nodes And Return Forest|
 |1143|Longest Common Subsequence|
+|1154|Day Of The Year|
 |1161|Maximum Level Sum Of A Binary Tree|
 |1290|Convert Binary Number In A Linked List To Integer|
 |1291|Sequential Digits|
 |1319|Number Of Operations To Make Network Connected|
+|1367|Linked List In Binary Tree|
 |1379|Find A Corresponding Node Of A Binary Tree In A Clone Of That Tree|
+|1528|Shuffle String|
 |1640|Check Array Formation Through Concatenation|
+|1669|Merge In Between Linked Lists|
 |1670|Design Front Middle Back Queue|
 |1721|Swapping Nodes In A Linked List|
 |1786|Number Of Restricted Path From First To Last Node|
+|1805|Number Of Different Intefers In A String|
+|1806|Minimum Numbers Of Operations To Reinitialize A Permutation|
+|1807|Evaluate The Bracket Of A String|
+|1808|Maximize Number Of Nice Divisors|
 
