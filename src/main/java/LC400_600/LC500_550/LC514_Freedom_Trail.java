@@ -8,9 +8,6 @@ public class LC514_Freedom_Trail {
 
     @Test
     public void test() {
-
-        //"xrrakuulnczywjs"
-        //"jrlucwzakzussrlckyjjsuwkuarnaluxnyzcnrxxwruyr"
         String ring = "godding";
         String key = "gd";
         System.out.println(findRotateSteps(ring, key));
