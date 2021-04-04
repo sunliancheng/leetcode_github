@@ -12,11 +12,9 @@ public class LC684_Redundant_Connection {
     private int[] pre = new int[10000];
 
     public int[] findRedundantConnection(int[][] edges) {
-        if (edges.length < 2)
-            return new int[0];
+        if (edges.length < 2) return new int[0];
 
-        for (int i = 0; i <= edges.length; ++i)
-            pre[i] = i;
+        for (int i = 0; i <= edges.length; ++i) pre[i] = i;
 
         int[] result = new int[edges.length];
         for (int i = 0; i < edges.length; ++i) {
