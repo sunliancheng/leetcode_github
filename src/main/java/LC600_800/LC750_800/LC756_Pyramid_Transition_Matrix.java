@@ -15,7 +15,6 @@ public class LC756_Pyramid_Transition_Matrix {
         String[] ss = new String[]{"ACBACFG","BGD","AGG","AGC","AGB","CCE","EGB","CCG","EGE","EGD","DCF","FGE","FGB","BFD","DBD","DBF","FFE","FFB","FDA","FDC","GBE","FDE","BEA","EGC","AEC","CCD","EEE","EED","DEB","DEE","DEF","EEB","CEE","BDC","GEC","GEB","GCA","GCB","BDA","GCG","AFF","DDB","EFB","DDG","DDF","DDE","CBF","ACB","ACG","ACF","BCD","BCC","DGB","EFD","CGD","CGG","FCB","GGF","FCD","FCF","FEB","BBF","BBE","CDE","ADA","DFE","DFG","DFB","CDD","EDC","CDF","EDD","FBC","FBF","AAD","AAF","AAB","BAG","BAD","CAG","CAF","DAB","DAC","EEC","GAE","FAG","ABA","EBC","CFG","GFD"};
         List<String> list = new ArrayList<>();
         for (String s : ss) list.add(s);
-
         //list.add("BCG"); list.add("CDE"); list.add("GEA"); list.add("FFF");
         System.out.println(pyramidTransition("ACBACFG", list));
     }
