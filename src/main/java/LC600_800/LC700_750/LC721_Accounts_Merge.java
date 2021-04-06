@@ -9,7 +9,7 @@ public class LC721_Accounts_Merge {
 
     @Test
     public void test() {
-
+        System.out.println();
     }
 
     public List<List<String>> accountsMerge(List<List<String>> accounts) {
