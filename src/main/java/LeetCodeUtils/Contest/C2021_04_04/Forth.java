@@ -16,7 +16,7 @@ public class Forth {
 
         ArrayList<Integer> list = new ArrayList();
         list.add(6); list.add(3);
-        System.out.println(findCommon(list));
+        //System.out.println(findCommon(list));
     }
 
     public int countDifferentSubsequenceGCDs(int[] nums) {
