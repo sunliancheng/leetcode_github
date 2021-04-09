@@ -1,11 +1,6 @@
 package LeetCodeUtils.Contest.C2021_04_04;
 
 import org.junit.Test;
-import sun.tools.jconsole.inspector.IconManager;
-
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.*;
 
 public class Forth {
