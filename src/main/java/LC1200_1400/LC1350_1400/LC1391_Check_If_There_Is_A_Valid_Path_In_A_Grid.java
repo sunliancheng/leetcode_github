@@ -7,7 +7,6 @@ public class LC1391_Check_If_There_Is_A_Valid_Path_In_A_Grid {
             return false;
 
         boolean[] dir = streets[grid[i][j]-1];
-
         if(!(i==0 && j==0) && !dir[p]) // check whether if the street is permitted from previous direction, except for the starting point
             return false;
 
