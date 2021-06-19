@@ -9,78 +9,60 @@ public class LC241_Different_Ways_To_Add_Parentheses {
 
     @Test
     public void test() {
-        List<Integer> ls = diffWaysToCompute("2*3-4*5");
-        for (int i : ls)
-            System.out.print(i + " ");
+        diffWaysToCompute("2").forEach(System.out::println);
     }
 
 
     // dp
-    List<Integer> data = new ArrayList<>();
-    List<Character> ops = new ArrayList<>();
-    public List<Integer> diffWaysToCompute(String input) {
-        int last = 0;
-        // update data and ops
-        for (int i = 0; i < input.length(); ++i) {
-            char c = input.charAt(i);
+    public List<Integer> diffWaysToCompute(String expression) {
+
+        List<Integer> data = new ArrayList<>();
+        List<Character> ops = new ArrayList<>();
+
+        // pre-handle the expression
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < expression.length(); ++i) {
+            char c = expression.charAt(i);
             if (c == '-' || c == '+' || c == '*') {
+                data.add(Integer.valueOf(sb.toString()));
                 ops.add(c);
-                data.add(Integer.valueOf(input.substring(last, i)));
-                last = i + 1;
+                sb = new StringBuilder();
+            } else {
+                sb.append(c);
+            }
+            if (i == expression.length() - 1) {
+                data.add(Integer.valueOf(sb.toString()));
             }
         }
-        data.add(Integer.valueOf(input.substring(last)));
 
         int n = data.size();
-        List<Integer>[][] dp = new List[n][n];
-        for (int i = 0; i < n; ++i)
-            for (int j = 0; j < n; ++j)
-                dp[i][j] = new ArrayList<>();
+        // define the dp matrix
+        List<Integer>[][] dp = new ArrayList[n][n];
 
-        for (int i = n; i >= 0; --i)
-            for (int j = i; j < n; ++j)
-                doThing(dp, i, j);
-
-        return dp[0][n - 1];
-    }
-
-    private List<Integer> doThing(List<Integer>[][] dp, int i, int j) {
-        if (dp[i][j].size() > 0)
-            return dp[i][j];
-        if (j == i) {
-            dp[i][j].add(data.get(i));
-        } else if (j - i == 1) {
-            dp[i][j].add(cal(i, j));
-        } else {
-            for (int k = i; k < j; ++k) {
-                List<Integer> left = doThing(dp, i, k);
-                List<Integer> right = doThing(dp, k + 1, j);
-                for (int l : left) {
-                    for (int r : right) {
-                        dp[i][j].add(cal(l, r, k));
+        for (int i = 0; i < n; ++i) {
+            for (int j = i; j >= 0; --j) {
+                dp[j][i] = new ArrayList<>();
+                if (i == j) {
+                    dp[j][i].add(data.get(i));
+                } else {
+                    for (int k = j; k < i; ++k) {
+                        for (int left : dp[j][k]) {
+                            for (int right : dp[k + 1][i]) {
+                                int val = 0;
+                                switch(ops.get(k)) {
+                                    case '-' : val = left - right; break;
+                                    case '+' : val = left + right; break;
+                                    case '*' : val = left * right; break;
+                                }
+                                dp[j][i].add(val);
+                            }
+                        }
                     }
                 }
             }
         }
-        return dp[i][j];
-    }
+        return dp[0][n - 1];
 
-    public int cal(int i, int j) {
-        switch (ops.get(i)) {
-            case '+' : return data.get(i) + data.get(j);
-            case '-' : return data.get(i) - data.get(j);
-            case '*' : return data.get(i) * data.get(j);
-            default: return -1;
-        }
-    }
-
-    public int cal(int i, int j, int k) {
-        switch (ops.get(k)) {
-            case '+' : return i + j;
-            case '-' : return i - j;
-            case '*' : return i * j;
-            default: return -1;
-        }
     }
 
 

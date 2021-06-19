@@ -1,17 +1,19 @@
-package LC200_400.LC300_350;
+package LC200_400.LC350_400;
 
 import org.omg.PortableInterceptor.INACTIVE;
 
 import java.util.*;
 
 public class LC398_Random_Pick_Index {
+
 }
 
-class Solution {
+
+class Solu {
 
     Map<Integer, List<Integer>> map = null;
 
-    public Solution(int[] nums) {
+    public Solu(int[] nums) {
         map = new HashMap<>();
         for (int i = 0; i < nums.length; ++i) {
             if (map.getOrDefault(nums[i], null) == null) {
